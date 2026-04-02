@@ -13,6 +13,6 @@ if (import.meta.hot) {
   })
 }
 
-import cfg0 from "/Users/zhuenxi/Documents/trae_projects/all-template/template03/app/app.config.ts"
+import cfg0 from "/Users/zhuxiaoming/Documents/trae_projects/template03/app/app.config.ts"
 
 export default /*@__PURE__*/ defuFn(cfg0, inlineConfig)

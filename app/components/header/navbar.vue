@@ -14,7 +14,7 @@
                         <div class="flex h-12 items-center justify-center">
                            <!-- Logo 动态切换 -->
                            <img 
-                                :src="isScrolled ? '/img/dark-logo.png' : '/img/logo.png'" 
+                                :src="isScrolled ? 'https://hidaddy.oss-cn-shanghai.aliyuncs.com/daddytemplate/fortemplate/logo.png' : 'https://hidaddy.oss-cn-shanghai.aliyuncs.com/daddytemplate/fortemplate/dark-logo.png'" 
                                 :alt="siteConfig?.logo?.logoName" 
                                 class="w-auto h-full object-contain transition-opacity duration-300"
                             >
