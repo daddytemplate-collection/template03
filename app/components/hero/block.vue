@@ -26,25 +26,25 @@
           
           <p v-scroll-reveal="{ delay: 0.1 }" 
              class="text-sm md:text-base text-white mb-4 lg:mb-5 opacity-90 tracking-wide">
-            {{ label }}
+            {{  siteConfig?.index?.hero?.welcomeText || '老爹模板' }}
           </p>
           
           <h1 v-scroll-reveal="{ delay: 0.2 }" 
               class="text-5xl font-semibold text-white leading-[1.15] mb-5 lg:mb-[25px]">
-            {{ title }}
+            {{ siteConfig?.index?.hero?.mainHeading || 'Your Global Business Journey Starts Here' }}
           </h1>
           
           <div class="hidden 2xl:block w-full h-[1px] bg-white/20 mb-6 lg:mb-[35px]"></div>
           
           <p v-scroll-reveal="{ delay: 0.3 }" 
              class="hidden 2xl:block text-base lg:text-lg leading-[1.6] text-white/85 mb-8 lg:mb-10 max-w-[580px]">
-            {{ description }}
+            {{ siteConfig?.index?.hero?.description || 'DaddyTemplate is a global business platform that helps businesses to grow and succeed.' }}
           </p>
           
-          <NuxtLink v-scroll-reveal="{ delay: 0.4 }" 
+          <NuxtLink v-scroll-reveal="{ delay: 0.3 }" 
                     :to="buttonLink" 
-                    class="inline-block px-8 py-[14px] border border-white rounded-[50px] text-white no-underline text-base transition-all duration-300 hover:bg-white hover:text-[#00122e]">
-            {{ buttonText }}
+                    class="inline-block px-8 py-[14px] border border-white rounded-[50px] text-white no-underline text-base transition-[background-color,color,border-color] duration-300 hover:bg-white hover:text-[#00122e]">
+            {{ siteConfig?.index?.hero?.ctaButton || 'Discover our products' }}
           </NuxtLink>
         </div>
 
@@ -53,14 +53,14 @@
           <div class="grid grid-cols-[1fr_1.6fr] gap-10 lg:gap-[60px] items-start max-lg:grid-cols-1 max-lg:gap-6">
             <!-- 左侧标题与按钮 -->
             <div class="card-left">
-              <h2 class="text-2xl lg:text-[32px] font-semibold text-white leading-[1.2] mb-6 lg:mb-[30px]">{{ cardTitle }}</h2>
+              <h2 class="text-2xl lg:text-[32px] font-semibold text-white leading-[1.2] mb-6 lg:mb-[30px]">{{ siteConfig?.index?.hero?.cardTitle || 'Relied on by brands' }}</h2>
               <NuxtLink :to="cardBtnLink" class="inline-block px-7 py-2.5 border border-white/50 rounded-[50px] text-white no-underline text-sm transition-all duration-300 hover:bg-white/15">
                 About Us
               </NuxtLink>
             </div>
             <!-- 右侧长文本描述 -->
             <div class="card-right">
-              <p class="text-sm lg:text-[15px] leading-[1.8] text-white/85 text-justify">{{ cardDescription }}</p>
+              <p class="text-sm lg:text-[15px] leading-[1.8] text-white/85 text-justify">{{ siteConfig?.index?.hero?.cardDescription || 'We simplify your sourcing with a specialized logistics system and reliable warehouse capacity. From custom synthesis in our labs to global distribution, your satisfaction is our pleasure. Trust the experience that has been leading the industry since 1980.' }}</p>
             </div>
           </div>
         </div>
@@ -73,24 +73,26 @@
 </template>
 
 <script setup>
+const siteConfig = useAppConfig()
+
 defineProps({
   // 顶部小标签
-  label: { type: String, default: 'SINCE 1980 | ISO 9001:2008 CERTIFIED' },
+  label: { type: String, default: '' },
   // 主标题
   title: { type: String, default: 'Aroma Chemicals, Natural Products & Menthol Synthetic' },
   // 主描述
   description: { 
     type: String, 
-    default: 'Leading manufacturer and exporter of high-purity fragrance ingredients. Backed by 40 years of expertise and a global supply chain, we deliver sustainable quality for the perfumery and food industries worldwide.' 
+    default: '' 
   },
   buttonText: { type: String, default: 'Explore Our Catalog' },
   buttonLink: { type: String, default: '/products' },
   
   // 底部卡片 Props
-  cardTitle: { type: String, default: 'Your Trusted Partner in China' },
+  cardTitle: { type: String, default: '' },
   cardDescription: { 
     type: String, 
-    default: 'We simplify your sourcing with a specialized logistics system and reliable warehouse capacity. From custom synthesis in our labs to global distribution, your satisfaction is our pleasure. Trust the experience that has been leading the industry since 1980.' 
+    default: '' 
   },
   cardBtnLink: { type: String, default: '/about' },
 

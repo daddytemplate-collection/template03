@@ -7,26 +7,26 @@ export default defineAppConfig({
     "address": "123 Main St, Anytown, CHina"
   },
   "logo": {
-    "logoUrl": "/img/logo.png",
+    "darklogoUrl": "https://hidaddy.oss-cn-shanghai.aliyuncs.com/daddytemplate/fortemplate/dark-logo.png",
+    "lightlogoUrl": "https://hidaddy.oss-cn-shanghai.aliyuncs.com/daddytemplate/fortemplate/logo.png",
     "logoName": "",
-    "slogan": "DaddyTemplate is a global business platform that helps businesses to grow and succeed."
   },
   "index": {
     "hero": {
-      "welcomeText": "老爹模板",
-      "mainHeading": "Your Global Business Journey Starts Here",
+      "welcomeText": "SINCE 1980 | ISO 9001:2008 CERTIFIED",
+      "mainHeading": "Aroma Chemicals, Natural Products & Menthol Synthetic",
+      "description": "Leading manufacturer and exporter of high-purity fragrance ingredients. Backed by 40 years of expertise and a global supply chain, we deliver sustainable quality for the perfumery and food industries worldwide.",
       "ctaButton": "Discover our products",
-      "logoMarqueeFirst": " Relied on by brands",
-      "logoMarqueeSecond": " Across the globe",
-      "brands": ["Vortex", "Nimbus", "Prysma", "Cirrus", "Kynder", "Halcyn"]
+      "cardTitle": "Your Trusted Partner in China",
+      "cardDescription": "We simplify your sourcing with a specialized logistics system and reliable warehouse capacity. From custom synthesis in our labs to global distribution, your satisfaction is our pleasure. Trust the experience that has been leading the industry since 1980.",
     },
     "case": {
-      "tag": "Products Studies",
-      "mainHeading": " See How DaddyTemplate Transforms Businesses",
-      "subtitle": "DaddyTemplate is a global business platform that helps businesses to grow and succeed. See how DaddyTemplate helps businesses to transform their operations and drive growth.",
+      "tag": "CATEGORY",
+      "mainHeading": "Core Excellence",
+      "subtitle": "Since 1980, we have specialized in high-purity aromachemicalsand natural products.",
       "product": [
         {
-          brand: "Logoipsum",
+          brand: "Sheng Yuan Lab Control",
           title: "Aroma Chemicals",
           products: [
             { id: '00001', name: '2,3-PENTANEDIONE', cas: '600-14-6' },
@@ -40,7 +40,7 @@ export default defineAppConfig({
           impact: ["40% Less Inventory Waste", "35% Faster Production", "20% More Accurate Forecasting", "25% Faster Fulfillment"]
         },
         {
-          brand: "TechFlow",
+          brand: "Sheng Yuan Lab Control",
           title: "Natural Products",
           products: [
             { id: '00001', name: 'ANETHOLE', cas: '104-46-1' },
@@ -54,7 +54,7 @@ export default defineAppConfig({
 
         },
         {
-          brand: "GlobalLogistics",
+          brand: "Sheng Yuan Lab Control",
           title: "Menthol Synthetic",
           description: `Production Route: M-Cresol → Thymol → L-Menthol & D-Menthol We are a manufacturer of all raw materials along this production chain and are the largest producer of cresol. Our synthetic menthol is produced through our joint venture company, Anhui Haihua, for which Shengyuan serves as the global exclusive agency.
 
@@ -65,9 +65,9 @@ Menthol and its related products are widely used in personal care applications.`
       ]
     },
     "benefitsGrid": {
-      "tag": "Benefits",
-      "mainHeading": " See How DaddyTemplate Transforms Businesses",
-      "subtitle": "DaddyTemplate is a global business platform that helps businesses to grow and succeed. See how DaddyTemplate helps businesses to transform their operations and drive growth.",
+      "tag": "PRODUCTS",
+      "mainHeading": "Explore Now",
+      "subtitle": "Quickly locate the exact CAS number or chemical name you need.",
       "benefits": [
         {
           title: "Iqqqncreased Productivity",

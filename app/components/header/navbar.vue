@@ -14,7 +14,7 @@
                         <div class="flex h-12 items-center justify-center">
                            <!-- Logo 动态切换 -->
                            <img 
-                                :src="isScrolled ? 'https://hidaddy.oss-cn-shanghai.aliyuncs.com/daddytemplate/fortemplate/dark-logo.png' : 'https://hidaddy.oss-cn-shanghai.aliyuncs.com/daddytemplate/fortemplate/logo.png'" 
+                                :src="isScrolled ? siteConfig?.logo?.darklogoUrl : siteConfig?.logo?.lightlogoUrl" 
                                 :alt="siteConfig?.logo?.logoName" 
                                 class="w-auto h-full object-contain transition-opacity duration-300"
                             >
@@ -59,7 +59,7 @@
                                 'border rounded-2xl shadow-2xl overflow-hidden backdrop-blur-xl transition-all duration-500',
                                 isScrolled 
                                     ? 'bg-white border-slate-100' 
-                                    : 'bg-slate-900/90 border-white/10'
+                                    : 'bg-white border-slate-100'
                             ]">
                                 <NuxtLink v-for="(subItem, subIndex) in item.subItems" :key="subIndex"
                                     :to="subItem.href"
@@ -67,7 +67,7 @@
                                         'block px-5 py-3 text-sm font-medium transition-colors',
                                         isScrolled
                                             ? 'text-slate-600 hover:text-blue-600 hover:bg-slate-50'
-                                            : 'text-white/70 hover:text-white hover:bg-white/10'
+                                            : 'text-slate-600 hover:text-blue-600 hover:bg-slate-50'
                                     ]">
                                     {{ subItem.label }}
                                 </NuxtLink>
@@ -90,7 +90,7 @@
                 </div>
 
                 <!-- 4. Mobile Menu Toggle -->
-                <div class="md:hidden flex items-center">
+                <div class="md:hidden flex items-center z-[100]">
                     <button @click="mobileMenuOpen = !mobileMenuOpen"
                         :class="[
                             'p-2.5 rounded-full transition-colors focus:outline-none',
@@ -112,8 +112,8 @@
                     leave-active-class="transition-all duration-300 ease-in"
                     leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-4">
                     <div v-if="mobileMenuOpen"
-                        class="md:hidden fixed inset-0 top-[80px] z-[99] bg-slate-900/95 backdrop-blur-3xl overflow-y-auto px-6 py-10">
-                        <div class="flex flex-col gap-2">
+                        class="md:hidden fixed inset-0 top-0 z-[99] bg-slate-900/95 backdrop-blur-3xl overflow-y-auto px-6 py-10">
+                        <div class="flex flex-col gap-2 pt-16">
                             <div v-for="(item, index) in navItems" :key="index" class="w-full">
                                 <div class="flex items-center justify-between py-4 border-b border-white/5">
                                     <NuxtLink :to="item.href" @click="mobileMenuOpen = false"

@@ -6,15 +6,15 @@
       <div class="flex flex-col items-center text-center mb-[80px]">
         <div v-scroll-reveal="{ delay: 0.1 }"
           class="px-5 py-1.5 rounded-full border border-[#00378a]/60 bg-white text-[11px]  text-[#00378a] mb-6 uppercase tracking-[0.2em] shadow-sm">
-          {{ siteConfig?.index?.case?.case?.tag || "Category" }}
+          {{ siteConfig?.index?.case?.tag || "Category" }}
         </div>
         <h2 v-scroll-reveal="{ delay: 0.2 }"
           class="text-[40px] md:text-[60px] font-light leading-[1.1] tracking-tight mb-6 text-[#001f4e]">
-          {{ siteConfig?.index?.case?.case?.mainHeading || "Core Excellence" }}
+          {{ siteConfig?.index?.case?.mainHeading || "Core Excellence" }}
         </h2>
         <p v-scroll-reveal="{ delay: 0.3 }"
           class="text-[#001f4e]/90  text-lg max-w-2xl font-extralight leading-relaxed">
-          {{ siteConfig?.index?.case?.case?.subtitle || "Since 1980, we have specialized in high-purity aromachemicalsand natural products." }}
+          {{ siteConfig?.index?.case?.subtitle || "Since 1980, we have specialized in high-purity aromachemicalsand natural products." }}
         </p>
       </div>
 
@@ -41,7 +41,7 @@
                   <FlaskConical class="size-5 text-[#00378a]" />
                 </div>
                 <span class="text-[11px] font-bold tracking-[0.25em] uppercase text-[#00378a]">
-                  Sheng Yuan Lab Control
+                    {{ currentCase.brand }}
                 </span>
               </div>
 
@@ -84,8 +84,8 @@
       </div>
 
       <!-- 3. 底部导航控制：工业蓝极简设计 -->
-      <div v-scroll-reveal="{ delay: 0.5 }"
-        class="mt-20 md:mt-20 flex items-center justify-between border-t border-slate-100 pt-8">
+      <div v-scroll-reveal
+        class="mt-10  flex items-center justify-between  border-slate-100 pt-8">
 
         <!-- 1. 进度指示：手机端数字更大，进度条更长 -->
         <div class="flex items-center gap-4 md:gap-4">
