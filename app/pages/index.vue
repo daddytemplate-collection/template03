@@ -21,30 +21,10 @@ const brandLogos = [
   { name: 'Solvex', src: 'https://image.shutterstock.com/image-photo/image-260nw-2452427655.jpg' },
 ]
 
-const myProductList = [
-  { id: '00001', name: '2,3-PENTANEDIONE', cas: '600-14-6', fema: '2841', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11747&t=l' },
-  { id: '00002', name: '2-METHYL-2-PENTENOIC ACID', cas: '3142-72-1', fema: '3142', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00004', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00005', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00006', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00007', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00008', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00009', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00010', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-]
+
 const { data: rawProducts, status } = await useAsyncData('products-collection', () => {
   return queryCollection('products')
-    .where('path', 'LIKE', '/products/category2/%') 
+    .where('path', 'LIKE', '/products/aroma-chemicals/%') 
     .all()
 })
 console.log('rawProducts',rawProducts.value)

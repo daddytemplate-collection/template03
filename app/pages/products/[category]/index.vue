@@ -32,11 +32,14 @@
       </div>
 
       <!-- 3. 产品网格 - 保持逻辑，注入动画 -->
-      <div v-if="products && products.length > 0"
+      <!-- <div v-if="products && products.length > 0"
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
         <div v-for="(item, index) in products" :key="item._path" v-scroll-reveal="{ delay: index * 0.1, y: 20 }">
           <ProductCard :product="item" />
         </div>
+      </div> -->
+      <div v-if="formattedProducts && formattedProducts.length > 0">
+        <BenefitsGridBlock  :showSearch="true" :products="formattedProducts"  />
       </div>
 
       <!-- 4. 空状态 (Empty State) - 改造成暗黑玻璃拟态 -->
@@ -75,11 +78,34 @@ import { PackageOpen } from 'lucide-vue-next'
 const route = useRoute()
 const categoryName = route.params.category as string
 
-const { data: products } = await useAsyncData(`category-${categoryName}`, () => {
-  // 使用新的 queryCollection 语法
+const { data: rawProducts, status } = await useAsyncData('products-collection', () => {
   return queryCollection('products')
-    .where('path', 'LIKE', `/products/${categoryName}/%`)
+    .where('path', 'LIKE', `/products/${categoryName}/%`) 
     .all()
+})
+
+// 2. 整理数据 (Mapping)
+// 使用 computed 实时转换数据格式，确保与你之前的假数据结构一致
+const formattedProducts = computed(() => {
+  // 必须确保 rawProducts.value 存在且是数组
+  if (!rawProducts.value || !Array.isArray(rawProducts.value)) return []
+  
+  return rawProducts.value.map((p, index) => { // ✅ 修复：这里必须加上 index 参数
+    // 自动获取文件名作为备份 ID
+    const fileName = p.path?.split('/').pop() || `item-${index}`
+    
+    return {
+      // 确保 ID 绝对唯一。由于你的 MD 里有 pid: "00001"，这里会优先使用它
+      id: (p.meta?.pid || fileName).toString().toUpperCase(), 
+      name: p.title || 'Untitled Product',
+      cas: String(p.meta?.cas || 'N/A'), // 强制转字符串
+      fema: String(p.meta?.fema || '-'),
+      grade: p.meta?.grade || 'Food Grade',
+      purity: p.meta?.purity || '99%+ Purity',
+      molecule_img: p.meta?.molecule_img || '',
+      path: p.path
+    }
+  })
 })
 // --- 动态 SEO 设置 ---
 // 将 categoryName 格式化为标题，例如 "laser-therapy" -> "Laser Therapy"

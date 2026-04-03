@@ -109,10 +109,6 @@ Menthol and its related products are widely used in personal care applications.`
       "subtitle": "Quick answers to your AI automation questions.",
       "faqs": [
         {
-          question: "这个模板是免费的吗?",
-          answer: "是的，这个模板是免费的。不收取任何费用, 你可以免费使用这个模板来实现你的业务需求。"
-        },
-        {
           question: "How can AI automation help my business?",
           answer: "AI automation streamlines your repetitive tasks, reduces human error, and provides data-driven insights, allowing your team to focus on strategic growth activities."
         },

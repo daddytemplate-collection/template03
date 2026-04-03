@@ -48,31 +48,67 @@
                         </NuxtLink>
 
                         <!-- 下拉菜单 -->
-                        <div v-if="item.hasDropdown" class="absolute top-full left-1/2 -translate-x-1/2 w-52 pt-4
-                            opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-                            transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[200]">
-                            
-                            <div class="absolute top-0 left-0 w-full h-4"></div>
+<div v-if="item.hasDropdown" 
+    class="absolute top-full left-1/2 -translate-x-1/2 w-[820px] pt-4
+    opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+    transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] transform translate-y-2 group-hover:translate-y-0 z-[200]">
+    
+    <!-- Bridge layer -->
+    <div class="absolute top-0 left-0 w-full h-4"></div>
 
-                            <!-- 下拉菜单样式优化：根据背景调整 -->
-                            <div :class="[
-                                'border rounded-2xl shadow-2xl overflow-hidden backdrop-blur-xl transition-all duration-500',
-                                isScrolled 
-                                    ? 'bg-white border-slate-100' 
-                                    : 'bg-white border-slate-100'
-                            ]">
-                                <NuxtLink v-for="(subItem, subIndex) in item.subItems" :key="subIndex"
-                                    :to="subItem.href"
-                                    :class="[
-                                        'block px-5 py-3 text-sm font-medium transition-colors',
-                                        isScrolled
-                                            ? 'text-slate-600 hover:text-blue-600 hover:bg-slate-50'
-                                            : 'text-slate-600 hover:text-blue-600 hover:bg-slate-50'
-                                    ]">
-                                    {{ subItem.label }}
-                                </NuxtLink>
-                            </div>
-                        </div>
+    <!-- Main Container: Sharp White Box -->
+    <div class="bg-white rounded-2xl shadow-[0_30px_90px_rgba(0,0,0,0.08)] border border-slate-100 overflow-hidden">
+        
+        <div class="p-8">
+            <!-- Section Header -->
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-50">
+                <div class="flex flex-col">
+                    <span class="text-[10px] font-bold tracking-[0.3em] text-blue-600 uppercase">Product Portfolio</span>
+                    <h3 class="text-lg font-medium text-slate-900 mt-1">Chemical Solutions</h3>
+                </div>
+                <NuxtLink to="/products" class="text-[11px] font-semibold text-slate-400 hover:text-blue-600 transition-colors tracking-widest uppercase">
+                    Explore All →
+                </NuxtLink>
+            </div>
+
+            <!-- 3-Column Grid -->
+            <div class="grid grid-cols-3 gap-8">
+                <NuxtLink v-for="(subItem, subIndex) in item.subItems" :key="subIndex"
+                    :to="subItem.href"
+                    class="group/item flex flex-col">
+                    
+                    <!-- Image: Precise Clipping -->
+                    <div class="relative aspect-[16/10] mb-5 rounded-lg overflow-hidden bg-slate-50">
+                        <img src="https://framerusercontent.com/images/5umROpQf1LFQZpL5TNpSAKSt0M.jpg" 
+                             class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover/item:scale-105" />
+                        
+                        <!-- Minimal overlay -->
+                        <div class="absolute inset-0 border border-black/5 rounded-lg pointer-events-none"></div>
+                    </div>
+
+                    <!-- Typography -->
+                    <div class="flex flex-col">
+                        <h4 class="text-[15px] font-semibold text-slate-900 group-hover/item:text-blue-600 transition-colors duration-300">
+                            {{ subItem.label }}
+                        </h4>
+                        <p class="mt-2 text-[12px] leading-[1.6] text-slate-400 font-normal tracking-wide">
+                            {{ subItem.description || 'Advanced purity standards for specialized industrial synthesis and research.' }}
+                        </p>
+                    </div>
+                </NuxtLink>
+            </div>
+        </div>
+
+        <!-- Minimal Footer -->
+        <div class="bg-slate-50/50 px-8 py-4 flex justify-between items-center">
+            <div class="flex space-x-4">
+                <span class="text-[10px] text-slate-400 tracking-wider">ISO 9001:2015 CERTIFIED</span>
+                <span class="text-[10px] text-slate-400 tracking-wider">REACH COMPLIANT</span>
+            </div>
+            <div class="text-[10px] text-slate-300 italic">Precision • Purity • Performance</div>
+        </div>
+    </div>
+</div>
                     </div>
                 </div>
 

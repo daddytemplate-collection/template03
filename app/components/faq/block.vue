@@ -23,7 +23,7 @@
           class="group border-b border-slate-100 transition-all px-6 duration-500" @click="toggle(index)">
           <!-- 问题行：增加垂直内边距，营造呼吸感 -->
           <div class="flex items-center justify-between py-8 cursor-pointer select-none">
-            <span class="text-lg md:text-xl font-medium transition-colors duration-500"
+            <span class="text-lg md:text-xl font-light transition-colors duration-500"
               :class="activeIndex === index ? 'text-[#00378a]' : 'text-[#001f4e] group-hover:text-[#00378a]'">
               {{ item.question }}
             </span>
@@ -47,52 +47,6 @@
           </div>
         </div>
       </div>
-      <!-- 每一个产品的展示逻辑 -->
-      <div class="product-item hover:bg-slate-50 border-b border-slate-100 p-4 transition-all group">
-        <div class="flex items-center justify-between">
-          <div class="flex flex-col">
-            <span class="text-[10px] text-slate-300 font-mono uppercase">Ref: #00001</span>
-            <h4 class="text-lg font-bold text-[#001f4e] group-hover:text-[#00378a]">2,3-PENTANEDIONE</h4>
-          </div>
-
-          <div class="flex items-center gap-10">
-            <div class="flex flex-col items-end">
-              <span class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">CAS Number</span>
-              <span class="text-[#00378a] font-mono font-bold">600-14-6</span>
-            </div>
-            <!-- 快捷询盘按钮 -->
-            <button
-              class="p-2 rounded-full border border-slate-200 text-slate-400 hover:bg-[#00378a] hover:text-white transition-all">
-              <Send size="18" />
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 产品详情页的技术参数块 -->
-      <div class="technical-specs-grid grid grid-cols-2 gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-100">
-        <div class="spec-item">
-          <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-1">CAS Number</p>
-          <p class="text-lg font-bold text-[#00378a]">600-14-6</p>
-        </div>
-
-        <div class="spec-item">
-          <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-1">FEMA Number</p>
-          <p class="text-lg font-bold text-slate-700">2841</p>
-        </div>
-
-        <div class="spec-item">
-          <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-1">EINECS Code</p>
-          <p class="text-lg font-bold text-slate-700">209-984-8</p>
-        </div>
-
-        <div class="spec-item">
-          <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-1">Flash Point</p>
-          <p class="text-lg font-bold text-slate-700">18.5 °C</p>
-        </div>
-      </div>
-
-     
     </div>
   </section>
 </template>
