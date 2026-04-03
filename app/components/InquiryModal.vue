@@ -87,7 +87,7 @@ const { isOpen, productName, showRegarding, closeInquiry, openInquiry } = useInq
 // 获取这个 key
 const accessKey = config.public.web3FormsKey
 
-const toast = useToast()
+
 const siteConfig = ref<any>({ contact: {} })
 const { defineField, handleSubmit, errors, isSubmitting, resetForm } = useForm({
     validationSchema: contactSchema,

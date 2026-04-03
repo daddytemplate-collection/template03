@@ -16,9 +16,9 @@ type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {},
 interface _GlobalComponents {
   CatalogFetcher: typeof import("../../app/components/CatalogFetcher.vue")['default']
   Counter: typeof import("../../app/components/Counter.vue")['default']
+  InquiryGlobalOverlay: typeof import("../../app/components/InquiryGlobalOverlay.vue")['default']
   InquiryModal: typeof import("../../app/components/InquiryModal.vue")['default']
   PremiumButton: typeof import("../../app/components/PremiumButton.vue")['default']
-  TheToast: typeof import("../../app/components/TheToast.vue")['default']
   BenefitsGridBlock: typeof import("../../app/components/benefitsGrid/block.vue")['default']
   CartBlock: typeof import("../../app/components/cart/block.vue")['default']
   CaseBlock: typeof import("../../app/components/case/block.vue")['default']
@@ -26,6 +26,7 @@ interface _GlobalComponents {
   FooterBlock: typeof import("../../app/components/footer/block.vue")['default']
   HeaderNavbar: typeof import("../../app/components/header/navbar.vue")['default']
   HeroBlock: typeof import("../../app/components/hero/block.vue")['default']
+  LogoTickerBlock: typeof import("../../app/components/logoTicker/block.vue")['default']
   ProductBlock: typeof import("../../app/components/product/block.vue")['default']
   ProductCard: typeof import("../../app/components/product/card.vue")['default']
   ProductGallery: typeof import("../../app/components/product/gallery.vue")['default']
@@ -67,6 +68,44 @@ interface _GlobalComponents {
   NuxtImg: typeof import("../../node_modules/.pnpm/@nuxt+image@2.0.0_db0@0.3.4_better-sqlite3@12.8.0__ioredis@5.10.1_magicast@0.5.2/node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']
   NuxtPicture: typeof import("../../node_modules/.pnpm/@nuxt+image@2.0.0_db0@0.3.4_better-sqlite3@12.8.0__ioredis@5.10.1_magicast@0.5.2/node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']
   ContentRenderer: typeof import("../../node_modules/.pnpm/@nuxt+content@3.12.0_better-sqlite3@12.8.0_magicast@0.5.2/node_modules/@nuxt/content/dist/runtime/components/ContentRenderer.vue")['default']
+  Button: typeof import("../../app/components/ui/button/index")['Button']
+  FormControl: typeof import("../../app/components/ui/form/index")['FormControl']
+  FormDescription: typeof import("../../app/components/ui/form/index")['FormDescription']
+  FormItem: typeof import("../../app/components/ui/form/index")['FormItem']
+  FormLabel: typeof import("../../app/components/ui/form/index")['FormLabel']
+  FormMessage: typeof import("../../app/components/ui/form/index")['FormMessage']
+  FORMITEMINJECTIONKEY: typeof import("../../app/components/ui/form/index")['FORM_ITEM_INJECTION_KEY']
+  Form: typeof import("../../app/components/ui/form/index")['Form']
+  FormField: typeof import("../../app/components/ui/form/index")['FormField']
+  FormFieldArray: typeof import("../../app/components/ui/form/index")['FormFieldArray']
+  Input: typeof import("../../app/components/ui/input/index")['Input']
+  InputGroup: typeof import("../../app/components/ui/input-group/index")['InputGroup']
+  InputGroupAddon: typeof import("../../app/components/ui/input-group/index")['InputGroupAddon']
+  InputGroupButton: typeof import("../../app/components/ui/input-group/index")['InputGroupButton']
+  InputGroupInput: typeof import("../../app/components/ui/input-group/index")['InputGroupInput']
+  InputGroupText: typeof import("../../app/components/ui/input-group/index")['InputGroupText']
+  InputGroupTextarea: typeof import("../../app/components/ui/input-group/index")['InputGroupTextarea']
+  Label: typeof import("../../app/components/ui/label/index")['Label']
+  Select: typeof import("../../app/components/ui/select/index")['Select']
+  SelectContent: typeof import("../../app/components/ui/select/index")['SelectContent']
+  SelectGroup: typeof import("../../app/components/ui/select/index")['SelectGroup']
+  SelectItem: typeof import("../../app/components/ui/select/index")['SelectItem']
+  SelectItemText: typeof import("../../app/components/ui/select/index")['SelectItemText']
+  SelectLabel: typeof import("../../app/components/ui/select/index")['SelectLabel']
+  SelectScrollDownButton: typeof import("../../app/components/ui/select/index")['SelectScrollDownButton']
+  SelectScrollUpButton: typeof import("../../app/components/ui/select/index")['SelectScrollUpButton']
+  SelectSeparator: typeof import("../../app/components/ui/select/index")['SelectSeparator']
+  SelectTrigger: typeof import("../../app/components/ui/select/index")['SelectTrigger']
+  SelectValue: typeof import("../../app/components/ui/select/index")['SelectValue']
+  Sheet: typeof import("../../app/components/ui/sheet/index")['Sheet']
+  SheetClose: typeof import("../../app/components/ui/sheet/index")['SheetClose']
+  SheetContent: typeof import("../../app/components/ui/sheet/index")['SheetContent']
+  SheetDescription: typeof import("../../app/components/ui/sheet/index")['SheetDescription']
+  SheetFooter: typeof import("../../app/components/ui/sheet/index")['SheetFooter']
+  SheetHeader: typeof import("../../app/components/ui/sheet/index")['SheetHeader']
+  SheetTitle: typeof import("../../app/components/ui/sheet/index")['SheetTitle']
+  SheetTrigger: typeof import("../../app/components/ui/sheet/index")['SheetTrigger']
+  Textarea: typeof import("../../app/components/ui/textarea/index")['Textarea']
   NuxtPage: typeof import("../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/pages/runtime/page")['default']
   NoScript: typeof import("../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/head/runtime/components")['NoScript']
   Link: typeof import("../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/head/runtime/components")['Link']
@@ -84,9 +123,9 @@ interface _GlobalComponents {
   NuxtIsland: typeof import("../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/components/nuxt-island")['default']
   LazyCatalogFetcher: LazyComponent<typeof import("../../app/components/CatalogFetcher.vue")['default']>
   LazyCounter: LazyComponent<typeof import("../../app/components/Counter.vue")['default']>
+  LazyInquiryGlobalOverlay: LazyComponent<typeof import("../../app/components/InquiryGlobalOverlay.vue")['default']>
   LazyInquiryModal: LazyComponent<typeof import("../../app/components/InquiryModal.vue")['default']>
   LazyPremiumButton: LazyComponent<typeof import("../../app/components/PremiumButton.vue")['default']>
-  LazyTheToast: LazyComponent<typeof import("../../app/components/TheToast.vue")['default']>
   LazyBenefitsGridBlock: LazyComponent<typeof import("../../app/components/benefitsGrid/block.vue")['default']>
   LazyCartBlock: LazyComponent<typeof import("../../app/components/cart/block.vue")['default']>
   LazyCaseBlock: LazyComponent<typeof import("../../app/components/case/block.vue")['default']>
@@ -94,6 +133,7 @@ interface _GlobalComponents {
   LazyFooterBlock: LazyComponent<typeof import("../../app/components/footer/block.vue")['default']>
   LazyHeaderNavbar: LazyComponent<typeof import("../../app/components/header/navbar.vue")['default']>
   LazyHeroBlock: LazyComponent<typeof import("../../app/components/hero/block.vue")['default']>
+  LazyLogoTickerBlock: LazyComponent<typeof import("../../app/components/logoTicker/block.vue")['default']>
   LazyProductBlock: LazyComponent<typeof import("../../app/components/product/block.vue")['default']>
   LazyProductCard: LazyComponent<typeof import("../../app/components/product/card.vue")['default']>
   LazyProductGallery: LazyComponent<typeof import("../../app/components/product/gallery.vue")['default']>
@@ -135,6 +175,44 @@ interface _GlobalComponents {
   LazyNuxtImg: LazyComponent<typeof import("../../node_modules/.pnpm/@nuxt+image@2.0.0_db0@0.3.4_better-sqlite3@12.8.0__ioredis@5.10.1_magicast@0.5.2/node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']>
   LazyNuxtPicture: LazyComponent<typeof import("../../node_modules/.pnpm/@nuxt+image@2.0.0_db0@0.3.4_better-sqlite3@12.8.0__ioredis@5.10.1_magicast@0.5.2/node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']>
   LazyContentRenderer: LazyComponent<typeof import("../../node_modules/.pnpm/@nuxt+content@3.12.0_better-sqlite3@12.8.0_magicast@0.5.2/node_modules/@nuxt/content/dist/runtime/components/ContentRenderer.vue")['default']>
+  LazyButton: LazyComponent<typeof import("../../app/components/ui/button/index")['Button']>
+  LazyFormControl: LazyComponent<typeof import("../../app/components/ui/form/index")['FormControl']>
+  LazyFormDescription: LazyComponent<typeof import("../../app/components/ui/form/index")['FormDescription']>
+  LazyFormItem: LazyComponent<typeof import("../../app/components/ui/form/index")['FormItem']>
+  LazyFormLabel: LazyComponent<typeof import("../../app/components/ui/form/index")['FormLabel']>
+  LazyFormMessage: LazyComponent<typeof import("../../app/components/ui/form/index")['FormMessage']>
+  LazyFORMITEMINJECTIONKEY: LazyComponent<typeof import("../../app/components/ui/form/index")['FORM_ITEM_INJECTION_KEY']>
+  LazyForm: LazyComponent<typeof import("../../app/components/ui/form/index")['Form']>
+  LazyFormField: LazyComponent<typeof import("../../app/components/ui/form/index")['FormField']>
+  LazyFormFieldArray: LazyComponent<typeof import("../../app/components/ui/form/index")['FormFieldArray']>
+  LazyInput: LazyComponent<typeof import("../../app/components/ui/input/index")['Input']>
+  LazyInputGroup: LazyComponent<typeof import("../../app/components/ui/input-group/index")['InputGroup']>
+  LazyInputGroupAddon: LazyComponent<typeof import("../../app/components/ui/input-group/index")['InputGroupAddon']>
+  LazyInputGroupButton: LazyComponent<typeof import("../../app/components/ui/input-group/index")['InputGroupButton']>
+  LazyInputGroupInput: LazyComponent<typeof import("../../app/components/ui/input-group/index")['InputGroupInput']>
+  LazyInputGroupText: LazyComponent<typeof import("../../app/components/ui/input-group/index")['InputGroupText']>
+  LazyInputGroupTextarea: LazyComponent<typeof import("../../app/components/ui/input-group/index")['InputGroupTextarea']>
+  LazyLabel: LazyComponent<typeof import("../../app/components/ui/label/index")['Label']>
+  LazySelect: LazyComponent<typeof import("../../app/components/ui/select/index")['Select']>
+  LazySelectContent: LazyComponent<typeof import("../../app/components/ui/select/index")['SelectContent']>
+  LazySelectGroup: LazyComponent<typeof import("../../app/components/ui/select/index")['SelectGroup']>
+  LazySelectItem: LazyComponent<typeof import("../../app/components/ui/select/index")['SelectItem']>
+  LazySelectItemText: LazyComponent<typeof import("../../app/components/ui/select/index")['SelectItemText']>
+  LazySelectLabel: LazyComponent<typeof import("../../app/components/ui/select/index")['SelectLabel']>
+  LazySelectScrollDownButton: LazyComponent<typeof import("../../app/components/ui/select/index")['SelectScrollDownButton']>
+  LazySelectScrollUpButton: LazyComponent<typeof import("../../app/components/ui/select/index")['SelectScrollUpButton']>
+  LazySelectSeparator: LazyComponent<typeof import("../../app/components/ui/select/index")['SelectSeparator']>
+  LazySelectTrigger: LazyComponent<typeof import("../../app/components/ui/select/index")['SelectTrigger']>
+  LazySelectValue: LazyComponent<typeof import("../../app/components/ui/select/index")['SelectValue']>
+  LazySheet: LazyComponent<typeof import("../../app/components/ui/sheet/index")['Sheet']>
+  LazySheetClose: LazyComponent<typeof import("../../app/components/ui/sheet/index")['SheetClose']>
+  LazySheetContent: LazyComponent<typeof import("../../app/components/ui/sheet/index")['SheetContent']>
+  LazySheetDescription: LazyComponent<typeof import("../../app/components/ui/sheet/index")['SheetDescription']>
+  LazySheetFooter: LazyComponent<typeof import("../../app/components/ui/sheet/index")['SheetFooter']>
+  LazySheetHeader: LazyComponent<typeof import("../../app/components/ui/sheet/index")['SheetHeader']>
+  LazySheetTitle: LazyComponent<typeof import("../../app/components/ui/sheet/index")['SheetTitle']>
+  LazySheetTrigger: LazyComponent<typeof import("../../app/components/ui/sheet/index")['SheetTrigger']>
+  LazyTextarea: LazyComponent<typeof import("../../app/components/ui/textarea/index")['Textarea']>
   LazyNuxtPage: LazyComponent<typeof import("../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/pages/runtime/page")['default']>
   LazyNoScript: LazyComponent<typeof import("../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/head/runtime/components")['NoScript']>
   LazyLink: LazyComponent<typeof import("../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/head/runtime/components")['Link']>

@@ -118,7 +118,7 @@
 
 
 <script setup lang="ts">
-
+import { toast } from 'vue-sonner'
 import { ref, onMounted } from 'vue'
 import { Mail, Phone, MapPin, Send, Loader2 } from 'lucide-vue-next'
 import { useForm } from 'vee-validate';
@@ -127,7 +127,7 @@ const config = useRuntimeConfig()
 
 // 获取这个 key
 const accessKey = config.public.web3FormsKey
-const toast = useToast();
+
 const siteConfig = useAppConfig()
 const iconMap = {
   Mail,

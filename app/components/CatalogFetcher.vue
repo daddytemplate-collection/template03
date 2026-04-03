@@ -48,7 +48,8 @@ import { categorySchema } from '@/utils/categotyValidation';
 
 // 假设这些是从全局注入或 Props 传入
 const config = useRuntimeConfig();
-const toast = useToast();
+import { toast } from 'vue-sonner'
+
 const siteConfig = useAppConfig(); // 确保 siteConfig 已定义
 
 const accessKey = config.public.web3FormsKey;

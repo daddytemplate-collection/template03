@@ -1,5 +1,5 @@
 ---
-id: "00001"
+pid: "00001"
 title: "2,3-PENTANEDIONE"
 cas: "600-14-6"
 fema: "2841"

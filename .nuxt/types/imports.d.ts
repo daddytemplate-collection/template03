@@ -11,6 +11,7 @@ declare global {
   const clearNuxtState: typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/state').clearNuxtState
   const computed: typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue').computed
   const contactSchema: typeof import('../../app/utils/validation').contactSchema
+  const countryList: typeof import('../../app/utils/countries').countryList
   const createError: typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/error').createError
   const createSitePathResolver: typeof import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.32.0_terser_385e61b2b9d3d7992227b792c7c64575/node_modules/nuxt-site-config/dist/runtime/app/composables/utils').createSitePathResolver
   const customRef: typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue').customRef
@@ -74,6 +75,7 @@ declare global {
   const preloadPayload: typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/payload').preloadPayload
   const preloadRouteComponents: typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/preload').preloadRouteComponents
   const prerenderRoutes: typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/ssr').prerenderRoutes
+  const productInquirySchema: typeof import('../../app/utils/productInquiryValidation').productInquirySchema
   const provide: typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue').provide
   const proxyRefs: typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue').proxyRefs
   const queryCollection: typeof import('../../node_modules/.pnpm/@nuxt+content@3.12.0_better-sqlite3@12.8.0_magicast@0.5.2/node_modules/@nuxt/content/dist/runtime/client').queryCollection
@@ -130,6 +132,7 @@ declare global {
   const useNuxtData: typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/asyncData').useNuxtData
   const useNuxtDevTools: typeof import('../../node_modules/.pnpm/@nuxt+devtools@3.2.4_vite@7.3.1_jiti@2.6.1_lightningcss@1.32.0_terser@5.46.1_yaml@2.8.2__vue@3.5.30_typescript@5.9.3_/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools').useNuxtDevTools
   const usePreviewMode: typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/preview').usePreviewMode
+  const useProductInquiry: typeof import('../../app/composables/useProductInquiry').useProductInquiry
   const useProductsNav: typeof import('../../app/composables/useProductsNav').useProductsNav
   const useRequestEvent: typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/ssr').useRequestEvent
   const useRequestFetch: typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/ssr').useRequestFetch
@@ -181,7 +184,6 @@ declare global {
   const useSlots: typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue').useSlots
   const useState: typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/state').useState
   const useTemplateRef: typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue').useTemplateRef
-  const useToast: typeof import('../../app/composables/useToast').useToast
   const useTransitionState: typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue').useTransitionState
   const watch: typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue').watch
   const watchEffect: typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue').watchEffect
@@ -216,6 +218,7 @@ declare module 'vue' {
     readonly clearNuxtState: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/state')['clearNuxtState']>
     readonly computed: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue')['computed']>
     readonly contactSchema: UnwrapRef<typeof import('../../app/utils/validation')['contactSchema']>
+    readonly countryList: UnwrapRef<typeof import('../../app/utils/countries')['countryList']>
     readonly createError: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/error')['createError']>
     readonly createSitePathResolver: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.32.0_terser_385e61b2b9d3d7992227b792c7c64575/node_modules/nuxt-site-config/dist/runtime/app/composables/utils')['createSitePathResolver']>
     readonly customRef: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue')['customRef']>
@@ -279,6 +282,7 @@ declare module 'vue' {
     readonly preloadPayload: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/payload')['preloadPayload']>
     readonly preloadRouteComponents: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/preload')['preloadRouteComponents']>
     readonly prerenderRoutes: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/ssr')['prerenderRoutes']>
+    readonly productInquirySchema: UnwrapRef<typeof import('../../app/utils/productInquiryValidation')['productInquirySchema']>
     readonly provide: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue')['provide']>
     readonly proxyRefs: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue')['proxyRefs']>
     readonly queryCollection: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+content@3.12.0_better-sqlite3@12.8.0_magicast@0.5.2/node_modules/@nuxt/content/dist/runtime/client')['queryCollection']>
@@ -335,6 +339,7 @@ declare module 'vue' {
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
     readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+devtools@3.2.4_vite@7.3.1_jiti@2.6.1_lightningcss@1.32.0_terser@5.46.1_yaml@2.8.2__vue@3.5.30_typescript@5.9.3_/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly usePreviewMode: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']>
+    readonly useProductInquiry: UnwrapRef<typeof import('../../app/composables/useProductInquiry')['useProductInquiry']>
     readonly useProductsNav: UnwrapRef<typeof import('../../app/composables/useProductsNav')['useProductsNav']>
     readonly useRequestEvent: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']>
     readonly useRequestFetch: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/ssr')['useRequestFetch']>
@@ -386,7 +391,6 @@ declare module 'vue' {
     readonly useSlots: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue')['useSlots']>
     readonly useState: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/composables/state')['useState']>
     readonly useTemplateRef: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue')['useTemplateRef']>
-    readonly useToast: UnwrapRef<typeof import('../../app/composables/useToast')['useToast']>
     readonly useTransitionState: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue')['useTransitionState']>
     readonly watch: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue')['watchEffect']>

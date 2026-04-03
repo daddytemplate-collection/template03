@@ -100,11 +100,33 @@
 
             <!-- 4. 询盘按钮列 -->
             <div class="flex justify-start md:justify-end">
-              <button @click="$emit('inquiry', item)"
-                class="bg-[#00378a] text-white px-6 py-3 rounded-xl font-extrabold text-sm flex items-center gap-2.5 transition-all duration-300 hover:bg-[#002d70] hover:shadow-[0_10px_20px_rgba(0,55,138,0.2)]">
-                <Send size="16" />
-                <span>Inquiry</span>
-              </button>
+<button 
+  @click="addToBasket(item)"
+  :disabled="isInBasket(item.id)"
+  :class="[
+    isInBasket(item.id) 
+      ? 'bg-slate-100 border-slate-200 text-slate-400 cursor-default shadow-none' // 已添加：彻底锁定样式
+      : 'bg-[#00378a] border-[#00378a] text-white hover:bg-[#002d70] hover:shadow-md active:scale-95 cursor-pointer' // 默认：允许交互
+  ]"
+  class="relative min-w-[140px] px-6 py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2.5 transition-all duration-500 overflow-hidden group"
+>
+  <!-- 图标逻辑 -->
+  <div class="relative w-4 h-4 flex items-center justify-center">
+    <Transition name="icon-slide">
+      <!-- 已添加：使用更淡的灰色，stroke 变细一点显得更轻盈 -->
+      <Check v-if="isInBasket(item.id)" :key="'check'" size="16" stroke-width="2.5" class="absolute text-slate-400" />
+      <!-- 默认：发送图标 -->
+      <Send v-else :key="'send'" size="16" class="absolute text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+    </Transition>
+  </div>
+
+  <!-- 文字逻辑 -->
+  <Transition name="text-fade" mode="out-in">
+    <span :key="isInBasket(item.id) ? 'added' : 'add'" class="tracking-tight">
+      {{ isInBasket(item.id) ? 'Added to List' : 'Inquiry' }}
+    </span>
+  </Transition>
+</button>
             </div>
           </div>
         </TransitionGroup>
@@ -159,7 +181,8 @@
 <script setup>
 // 1. 导入所有需要的 API
 import { ref, computed, watch } from 'vue' // 确保导入了 watch
-import { Search, FileText, Send, FlaskConical,ArrowUpRight } from 'lucide-vue-next'
+import { Search, FileText, Send, FlaskConical,ArrowUpRight,Check } from 'lucide-vue-next'
+const { addToBasket, isInBasket } = useProductInquiry()
 const INITIAL_COUNT = 6;
 // 2. 环境配置与 Props 定义
 const siteConfig = useAppConfig()
@@ -176,19 +199,36 @@ const pageSize = INITIAL_COUNT
 
 // 4. 第一层过滤：根据搜索条件过滤原始列表
 const displayProducts = computed(() => {
-  if (!props.products) return []
-  let list = props.products
-  if (searchQuery.value) {
-    const q = searchQuery.value.toLowerCase()
-    list = list.filter(p => p.name?.toLowerCase().includes(q) || p.cas?.includes(q))
+  // 1. 获取原始数据源
+  const source = props.products || []
+  if (source.length === 0) return []
+
+  // 2. 处理搜索词 (去掉空格、转小写)
+  const q = searchQuery.value?.trim().toLowerCase() || ''
+
+  // 3. 如果没搜，直接返回原始列表 (受 limit 约束)
+  if (!q) {
+    return props.limit > 0 ? source.slice(0, props.limit) : source
   }
-  // 注意：逻辑里处理了 limit 限制
-  return props.limit > 0 && !searchQuery.value ? list.slice(0, props.limit) : list
+
+  // 4. 关键：执行多字段模糊匹配
+  return source.filter(p => {
+    // 确保所有字段都转为字符串再搜索，防止 cas: 600... 这种数字格式导致报错
+    const name = String(p.name || '').toLowerCase()
+    const cas = String(p.cas || '').toLowerCase()
+    const id = String(p.id || '').toLowerCase()
+    const fema = String(p.fema || '').toLowerCase()
+
+    return name.includes(q) || 
+           cas.includes(q) || 
+           id.includes(q) || 
+           fema.includes(q)
+  })
 })
 
 // 5. 第二层过滤：根据分页数量切片显示
 const paginatedProducts = computed(() => {
-  // 必须在 displayProducts 定义之后引用它
+  // 只有当有搜索结果时，才进行切片显示
   return displayProducts.value.slice(0, visibleCount.value)
 })
 
@@ -219,5 +259,41 @@ watch(searchQuery, () => {
 .list-fade-leave-to {
   opacity: 0;
   transform: translateY(20px);
+}
+
+
+/* 1. 图标滑入滑出动画：像抽屉一样上下切换 */
+.icon-slide-enter-active,
+.icon-slide-leave-active {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.icon-slide-enter-from {
+  transform: translateY(20px) scale(0.5);
+  opacity: 0;
+}
+.icon-slide-leave-to {
+  transform: translateY(-20px) scale(0.5);
+  opacity: 0;
+}
+
+/* 2. 文字淡入淡出动画 */
+.text-fade-enter-active,
+.text-fade-leave-active {
+  transition: all 0.3s ease;
+}
+.text-fade-enter-from {
+  opacity: 0;
+  transform: translateX(5px);
+}
+.text-fade-leave-to {
+  opacity: 0;
+  transform: translateX(-5px);
+}
+
+/* 3. 按钮背景色过渡增强 */
+button {
+  transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.4s ease;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <nav :class="[
-        'fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out',
+        'fixed top-0 left-0 right-0 z-[20] transition-all duration-500 ease-in-out',
         isScrolled
             ? 'bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-lg py-0'
             : 'bg-transparent py-4'
@@ -112,7 +112,7 @@
                     leave-active-class="transition-all duration-300 ease-in"
                     leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-4">
                     <div v-if="mobileMenuOpen"
-                        class="md:hidden fixed inset-0 top-0 z-[99] bg-slate-900/95 backdrop-blur-3xl overflow-y-auto px-6 py-10">
+                        class="md:hidden fixed inset-0 top-0 z-[10] bg-slate-900/95 backdrop-blur-3xl overflow-y-auto px-6 py-10">
                         <div class="flex flex-col gap-2 pt-16">
                             <div v-for="(item, index) in navItems" :key="index" class="w-full">
                                 <div class="flex items-center justify-between py-4 border-b border-white/5">

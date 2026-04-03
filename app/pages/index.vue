@@ -1,40 +1,37 @@
 <template>
   <div>
     <HeroBlock />
+    <LogoTickerBlock :logos="brandLogos" duration="20s" />
     <CaseBlock />
-    <BenefitsGridBlock  :showSearch="true" :products="myProductList"  />
+    <BenefitsGridBlock  :showSearch="true" :products="formattedProducts"  />
     <FaqBlock />
     <CartBlock />
   </div>
 </template>
 
 <script setup>
-const siteConfig = ref({
+const siteConfig = useAppConfig()
 
-})
-onMounted(async () => {
-  try {
-    const response = await fetch('/setting.json')
-    if (response.ok) {
-      const data = await response.json()
-      siteConfig.value = { ...siteConfig.value, ...data }
-    }
-  } catch (e) {
-    console.warn("Setting.json not found")
-  }
-})
+
+const brandLogos = [
+  { name: 'Verdant', src: 'https://ifeat.org/app/uploads/2025/08/Group-48976-1.svg' },
+  { name: 'AERO', src: 'https://images.seeklogo.com/logo-png/5/2/fda-logo-png_seeklogo-53223.png' },
+  { name: 'Helix', src: 'https://images.seeklogo.com/logo-png/6/2/halal-logo-png_seeklogo-64752.png' },
+  { name: 'LITH', src: 'https://images.seeklogo.com/logo-png/24/2/star-kosher-logo-png_seeklogo-247664.png' },
+  { name: 'Solvex', src: 'https://image.shutterstock.com/image-photo/image-260nw-2452427655.jpg' },
+]
 
 const myProductList = [
   { id: '00001', name: '2,3-PENTANEDIONE', cas: '600-14-6', fema: '2841', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11747&t=l' },
   { id: '00002', name: '2-METHYL-2-PENTENOIC ACID', cas: '3142-72-1', fema: '3142', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
   { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
-  { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
+  { id: '00004', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
+  { id: '00005', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
+  { id: '00006', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
+  { id: '00007', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
+  { id: '00008', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
+  { id: '00009', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
+  { id: '00010', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
   { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
   { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
   { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
@@ -45,13 +42,35 @@ const myProductList = [
   { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
   { id: '00003', name: 'MENTHOL CRYSTAL', cas: '2216-51-5', fema: '2665', molecule_img: 'https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=11770&t=l' },
 ]
-const { data: products } = await useAsyncData(`category-category2`, () => {
+const { data: rawProducts, status } = await useAsyncData('products-collection', () => {
   return queryCollection('products')
-    // 必须指定是对 'path' 字段进行模糊匹配
     .where('path', 'LIKE', '/products/category2/%') 
     .all()
 })
-console.log('pr',products)
+console.log('rawProducts',rawProducts.value)
+// 2. 整理数据 (Mapping)
+// 使用 computed 实时转换数据格式，确保与你之前的假数据结构一致
+const formattedProducts = computed(() => {
+  // 必须确保 rawProducts.value 存在且是数组
+  if (!rawProducts.value || !Array.isArray(rawProducts.value)) return []
+  
+  return rawProducts.value.map((p, index) => { // ✅ 修复：这里必须加上 index 参数
+    // 自动获取文件名作为备份 ID
+    const fileName = p.path?.split('/').pop() || `item-${index}`
+    
+    return {
+      // 确保 ID 绝对唯一。由于你的 MD 里有 pid: "00001"，这里会优先使用它
+      id: (p.meta?.pid || fileName).toString().toUpperCase(), 
+      name: p.title || 'Untitled Product',
+      cas: String(p.meta?.cas || 'N/A'), // 强制转字符串
+      fema: String(p.meta?.fema || '-'),
+      grade: p.meta?.grade || 'Food Grade',
+      purity: p.meta?.purity || '99%+ Purity',
+      molecule_img: p.meta?.molecule_img || '',
+      path: p.path
+    }
+  })
+})
 // seo meta
 useSeoMeta({
   title: () => siteConfig.value?.seo?.index.title || 'Default Title',
