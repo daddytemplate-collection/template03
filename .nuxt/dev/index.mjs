@@ -1,45 +1,45 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, getRequestProtocol, getRequestHost, setHeader, getHeader, getRouterParam, getResponseStatus, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatusText } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/h3@1.15.9/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, getRequestProtocol, getRequestHost, setHeader, getHeader, getRouterParam, getResponseStatus, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatusText } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/h3@1.15.9/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve as resolve$1, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { escapeHtml } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/@vue+shared@3.5.30/node_modules/@vue/shared/dist/shared.cjs.js';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/vue-bundle-renderer@2.2.0/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, hasProtocol, withHttps, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL, parsePath, stringifyQuery, parseQuery, encodePath, stringifyParsedURL, withBase } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/ufo@1.6.3/node_modules/ufo/dist/index.mjs';
-import destr, { destr as destr$1 } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs';
-import { renderToString } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue/server-renderer/index.mjs';
-import { createHooks } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/ofetch@1.5.1/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/node-mock-http@1.0.4/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/unstorage@1.17.4_db0@0.3.4_better-sqlite3@12.8.0__ioredis@5.10.1/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/unstorage@1.17.4_db0@0.3.4_better-sqlite3@12.8.0__ioredis@5.10.1/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/ohash@2.0.11/node_modules/ohash/dist/index.mjs';
-import { klona } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs';
-import defu, { defuFn, defu as defu$1, createDefu } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
-import { snakeCase } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/scule@1.3.0/node_modules/scule/dist/index.mjs';
-import { getContext } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/unctx@2.5.0/node_modules/unctx/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/radix3@1.1.2/node_modules/radix3/dist/index.mjs';
+import { escapeHtml } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/@vue+shared@3.5.30/node_modules/@vue/shared/dist/shared.cjs.js';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/vue-bundle-renderer@2.2.0/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, hasProtocol, withHttps, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL, parsePath, stringifyQuery, parseQuery, encodePath, stringifyParsedURL, withBase } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/ufo@1.6.3/node_modules/ufo/dist/index.mjs';
+import destr, { destr as destr$1 } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs';
+import { renderToString } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue/server-renderer/index.mjs';
+import { createHooks } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/ofetch@1.5.1/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/node-mock-http@1.0.4/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/unstorage@1.17.4_db0@0.3.4_better-sqlite3@12.8.0__ioredis@5.10.1/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/unstorage@1.17.4_db0@0.3.4_better-sqlite3@12.8.0__ioredis@5.10.1/node_modules/unstorage/drivers/fs.mjs';
+import { digest } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/ohash@2.0.11/node_modules/ohash/dist/index.mjs';
+import { klona } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs';
+import defu, { defuFn, defu as defu$1, createDefu } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
+import { snakeCase } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/scule@1.3.0/node_modules/scule/dist/index.mjs';
+import { getContext } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/unctx@2.5.0/node_modules/unctx/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/radix3@1.1.2/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { createConsola, consola as consola$1 } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/consola@3.4.2/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/youch-core@0.3.3/node_modules/youch-core/build/index.js';
-import { Youch } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/youch@4.1.0/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/source-map@0.7.6/node_modules/source-map/source-map.js';
-import devalue from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/@nuxt+devalue@2.0.2/node_modules/@nuxt/devalue/dist/devalue.mjs';
-import { toValue, isVNode, isRef } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue/index.mjs';
+import consola, { createConsola, consola as consola$1 } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/consola@3.4.2/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/youch-core@0.3.3/node_modules/youch-core/build/index.js';
+import { Youch } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/youch@4.1.0/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/source-map@0.7.6/node_modules/source-map/source-map.js';
+import devalue from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/@nuxt+devalue@2.0.2/node_modules/@nuxt/devalue/dist/devalue.mjs';
+import { toValue, isVNode, isRef } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue/index.mjs';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { stringify, uneval } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/devalue@5.6.4/node_modules/devalue/index.js';
-import { captureRawStackTrace, parseRawStackTrace } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/errx@0.1.0/node_modules/errx/dist/index.js';
-import _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/@nuxt+vite-builder@3.21.2_lightningcss@1.32.0_magicast@0.5.2_nuxt@3.21.2_@parcel+watche_3634535f1f56ff2ae10252c108a7ee79/node_modules/@nuxt/vite-builder/dist/fix-stacktrace.mjs';
+import { stringify, uneval } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/devalue@5.6.4/node_modules/devalue/index.js';
+import { captureRawStackTrace, parseRawStackTrace } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/errx@0.1.0/node_modules/errx/dist/index.js';
+import _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/@nuxt+vite-builder@3.21.2_lightningcss@1.32.0_magicast@0.5.2_nuxt@3.21.2_@parcel+watche_3634535f1f56ff2ae10252c108a7ee79/node_modules/@nuxt/vite-builder/dist/fix-stacktrace.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname as dirname$1, resolve as resolve$2, isAbsolute } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/pathe@2.0.3/node_modules/pathe/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/unhead@2.1.12/node_modules/unhead/dist/server.mjs';
-import { walkResolver } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/unhead@2.1.12/node_modules/unhead/dist/utils.mjs';
-import { XMLParser } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/fast-xml-parser@5.5.7/node_modules/fast-xml-parser/src/fxp.js';
-import localAdapter from 'file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/db0@0.3.4_better-sqlite3@12.8.0/node_modules/db0/dist/connectors/better-sqlite3.mjs';
+import { dirname as dirname$1, resolve as resolve$2, isAbsolute } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/pathe@2.0.3/node_modules/pathe/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/unhead@2.1.12/node_modules/unhead/dist/server.mjs';
+import { walkResolver } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/unhead@2.1.12/node_modules/unhead/dist/utils.mjs';
+import { XMLParser } from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/fast-xml-parser@5.5.7/node_modules/fast-xml-parser/src/fxp.js';
+import localAdapter from 'file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/db0@0.3.4_better-sqlite3@12.8.0/node_modules/db0/dist/connectors/better-sqlite3.mjs';
 
-const serverAssets = [{"baseName":"server","dir":"/Users/zhuxiaoming/Documents/trae_projects/template03/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"/Users/zhuenxi/Documents/trae_projects/all-template/template03/server/assets"}];
 
 const assets$1 = createStorage();
 
@@ -51,11 +51,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/zhuxiaoming/Documents/trae_projects/template03","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/zhuxiaoming/Documents/trae_projects/template03/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/zhuxiaoming/Documents/trae_projects/template03/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/zhuxiaoming/Documents/trae_projects/template03/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/zhuxiaoming/Documents/trae_projects/template03/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/zhuenxi/Documents/trae_projects/all-template/template03","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/zhuenxi/Documents/trae_projects/all-template/template03/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/zhuenxi/Documents/trae_projects/all-template/template03/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/zhuenxi/Documents/trae_projects/all-template/template03/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/zhuenxi/Documents/trae_projects/all-template/template03/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -584,7 +584,7 @@ const defineAppConfig = (config) => config;
 const appConfig0 = defineAppConfig({
   "base": {
     "email": "inofo@daddytemplate.com",
-    "companyName": "daddytemplate Corporate",
+    "companyName": "Shengyuan",
     "phone": "+86 (136) 5661-7631",
     "address": "123 Main St, Anytown, CHina"
   },
@@ -592,6 +592,39 @@ const appConfig0 = defineAppConfig({
     "darklogoUrl": "https://hidaddy.oss-cn-shanghai.aliyuncs.com/daddytemplate/fortemplate/dark-logo.png",
     "lightlogoUrl": "https://hidaddy.oss-cn-shanghai.aliyuncs.com/daddytemplate/fortemplate/logo.png",
     "logoName": ""
+  },
+  megaMenu: {
+    // 1. 顶部标题区域
+    header: {
+      tag: "Product Portfolio",
+      title: "Chemical Solutions"
+    },
+    // 2. 三个分类的具体内容（图片、文字、描述）
+    categories: [
+      {
+        label: "Aroma Chemicals",
+        slug: "aroma-chemicals",
+        description: "High-purity aroma chemicals for sophisticated fragrance and flavor synthesis.",
+        image: "https://framerusercontent.com/images/5umROpQf1LFQZpL5TNpSAKSt0M.jpg"
+      },
+      {
+        label: "Natural Products",
+        slug: "natural-products",
+        description: "Pure botanical extractions maintaining the full spectrum of natural aromatic profiles.",
+        image: "https://media.istockphoto.com/id/1315042436/zh/%E7%85%A7%E7%89%87/%E5%A9%A6%E5%A5%B3%E6%BA%96%E5%82%99%E8%8A%B3%E9%A6%99%E7%99%82%E6%B3%95%E6%9C%83%E8%AD%B0%E5%9C%A8%E9%A4%90%E6%A1%8C%E4%B8%8A%E8%88%87%E7%B2%BE%E6%B2%B9%E6%93%B4%E6%95%A3%E5%8A%91%E9%86%AB%E7%94%A8%E8%8D%89%E8%97%A5%E4%B8%8D%E5%90%8C%E9%A1%9E%E5%9E%8B%E7%9A%84%E6%B2%B9%E5%92%8C%E7%B2%BE%E8%8F%AF%E8%8A%B3%E9%A6%99%E7%99%82%E6%B3%95%E5%92%8C%E6%9B%BF%E4%BB%A3%E9%86%AB%E5%AD%B8%E6%A6%82%E5%BF%B5%E8%87%AA%E7%84%B6%E7%99%82%E6%B3%95.jpg?s=2048x2048&w=is&k=20&c=dM2hJdmCbWzgBuD43iPre0S1S9kt2Bfwg2HB3jqLykQ="
+      },
+      {
+        label: "Menthol Synthetic",
+        slug: "menthol-synthetic",
+        description: "Tailored chemical solutions designed for specific industrial research requirements.",
+        image: "https://media.istockphoto.com/id/1405646574/zh/%E7%85%A7%E7%89%87/translucent-menthol-crystals-and-green-mint-leaves-falling-on-white-background.webp?s=2048x2048&w=is&k=20&c=ckqSAmSzW05UuHudasbLuHwHSKJW__rrw6W858ga5ZQ="
+      }
+    ],
+    // 3. 底部认证与位置信息
+    footer: {
+      certifications: ["ISO 9001:2008 CERTIFIED", "REACH COMPLIANT"],
+      location: "ShengYuan \u2022 JiaXing \u2022 China"
+    }
   },
   "index": {
     "hero": {
@@ -934,7 +967,7 @@ const _inlineRuntimeConfig = {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-04-03T08:56:56.225Z"
+          "X-Sitemap-Prerendered": "2026-04-04T05:16:45.938Z"
         }
       },
       "/": {
@@ -962,7 +995,7 @@ const _inlineRuntimeConfig = {
     }
   },
   "public": {
-    "web3FormsKey": "",
+    "web3FormsKey": "6fba6186-2858-4c1f-8838-34586a330ee3",
     "mdc": {
       "components": {
         "prose": true,
@@ -1066,7 +1099,7 @@ const _inlineRuntimeConfig = {
     },
     "localDatabase": {
       "type": "sqlite",
-      "filename": "/Users/zhuxiaoming/Documents/trae_projects/template03/.data/content/contents.sqlite"
+      "filename": "/Users/zhuenxi/Documents/trae_projects/all-template/template03/.data/content/contents.sqlite"
     },
     "integrityCheck": true
   },
@@ -1093,7 +1126,7 @@ const _inlineRuntimeConfig = {
     "alias": {},
     "fs": {
       "dir": [
-        "/Users/zhuxiaoming/Documents/trae_projects/template03/public"
+        "/Users/zhuenxi/Documents/trae_projects/all-template/template03/public"
       ]
     },
     "http": {
@@ -2477,7 +2510,7 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _1STdVfTSSgyqeReejVLiVsnToC6TIyPFC4vZ3cd7GC4 = (function(nitro) {
+const _JSoJ1tme7yCmXxTEaBrfNBPAui3wfSQ8L_UaCARdY = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
@@ -2577,7 +2610,7 @@ function getSiteConfig(e, _options) {
   return e.context.siteConfig.get(options);
 }
 
-const _tuoksKlbX_SgPgQpBPuMV2R7wTLBZe96BnMssjzT4KY = defineNitroPlugin(async (nitroApp) => {
+const _vSoVsE2W0wRi1JvXAmK5FE77YW9W16eIEZNOfcAafg = defineNitroPlugin(async (nitroApp) => {
   nitroApp.hooks.hook("render:html", async (ctx, { event }) => {
     const routeOptions = getRouteRules(event);
     const isIsland = process.env.NUXT_COMPONENT_ISLANDS && event.path.startsWith("/__nuxt_island");
@@ -2592,7 +2625,7 @@ const _tuoksKlbX_SgPgQpBPuMV2R7wTLBZe96BnMssjzT4KY = defineNitroPlugin(async (ni
   });
 });
 
-const rootDir = "/Users/zhuxiaoming/Documents/trae_projects/template03";
+const rootDir = "/Users/zhuenxi/Documents/trae_projects/all-template/template03";
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
 
@@ -2621,7 +2654,7 @@ const asyncContext = getContext("nuxt-dev", {
 	asyncContext: true,
 	AsyncLocalStorage
 });
-const _aYlxd1rUQA1yrC2LGCsvETnpNjJxWM_dXO04C1fe1uQ = (nitroApp) => {
+const _BqKzGfLs68qqEVsR8n7nFresv27fJxwjtfmM3jkvEwM = (nitroApp) => {
 	const handler = nitroApp.h3App.handler;
 	nitroApp.h3App.handler = (event) => {
 		return asyncContext.callAsync({
@@ -2695,25 +2728,25 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  _1STdVfTSSgyqeReejVLiVsnToC6TIyPFC4vZ3cd7GC4,
-_tuoksKlbX_SgPgQpBPuMV2R7wTLBZe96BnMssjzT4KY,
-_aYlxd1rUQA1yrC2LGCsvETnpNjJxWM_dXO04C1fe1uQ,
+  _JSoJ1tme7yCmXxTEaBrfNBPAui3wfSQ8L_UaCARdY,
+_vSoVsE2W0wRi1JvXAmK5FE77YW9W16eIEZNOfcAafg,
+_BqKzGfLs68qqEVsR8n7nFresv27fJxwjtfmM3jkvEwM,
 _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw
 ];
 
 const assets = {
   "/index.mjs": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"3a150-zfeBmcgr2qMlH0L7uIt0rPBSmS0\"",
-    "mtime": "2026-04-03T08:57:00.091Z",
-    "size": 237904,
+    "etag": "\"3aa85-KIdTjSk+dj01TGdTuiZtttSpfjk\"",
+    "mtime": "2026-04-05T12:21:16.800Z",
+    "size": 240261,
     "path": "index.mjs"
   },
   "/index.mjs.map": {
     "type": "application/json",
-    "etag": "\"f518c-yvI6J/zzYIx9XGyMwnw/FEaamUE\"",
-    "mtime": "2026-04-03T08:57:00.092Z",
-    "size": 1003916,
+    "etag": "\"f6d35-cRQknoeu66ooPlqDGnv+S6+nb1E\"",
+    "mtime": "2026-04-05T12:21:16.826Z",
+    "size": 1010997,
     "path": "index.mjs.map"
   }
 };
@@ -2741,7 +2774,7 @@ function getAsset (id) {
 
 const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
 const EncodingMap = { gzip: ".gz", br: ".br" };
-const _CMIqs1 = eventHandler((event) => {
+const _jo0cgE = eventHandler((event) => {
   if (event.method && !METHODS.has(event.method)) {
     return;
   }
@@ -2881,9 +2914,9 @@ function publicAssetsURL(...path) {
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
 // @ts-expect-error file will be produced after app build
-const getServerEntry = () => import('file:///Users/zhuxiaoming/Documents/trae_projects/template03/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
+const getServerEntry = () => import('file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
 // @ts-expect-error file will be produced after app build
-const getClientManifest = () => import('file:///Users/zhuxiaoming/Documents/trae_projects/template03/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getClientManifest = () => import('file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 // -- SSR Renderer --
 const getSSRRenderer = lazyCachedFunction(async () => {
 	// Load server bundle
@@ -3272,7 +3305,7 @@ function getNitroOrigin(e) {
   });
 }
 
-const _M3ZDBY = eventHandler(async (e) => {
+const _rJuJ1X = eventHandler(async (e) => {
   if (e.context._initedSiteConfig)
     return;
   const runtimeConfig = useRuntimeConfig(e);
@@ -3323,7 +3356,7 @@ const _M3ZDBY = eventHandler(async (e) => {
   e.context._initedSiteConfig = true;
 });
 
-const _ry6Yt9 = eventHandler(async (e) => {
+const _tWROTK = eventHandler(async (e) => {
   const siteConfig = getSiteConfig(e);
   const nitroOrigin = getNitroOrigin(e);
   const runtimeConfig = useRuntimeConfig(e);
@@ -3338,7 +3371,7 @@ const _ry6Yt9 = eventHandler(async (e) => {
 });
 
 const checksums = {
-  "products": "v3.5.0--9tvtanycntSdZWpL2cixdErLU4AbhRsqEuGK2Phofa4"
+  "products": "v3.5.0--eD8bb7DnHXUjL9LGpn3TcnS_vsL2p8kjcBNk9ZGyeow"
 };
 const checksumsStructure = {
   "products": "n5JQRVnYL0x8Hyos6t0Yj3QCkhLnUhPNPI5qTqJrpvA"
@@ -3563,7 +3596,7 @@ const filters = new Map();
 
 const onUrlFns = new Map();
 
-const _aJjk6N = defineEventHandler(async (e) => {
+const _FAArPL = defineEventHandler(async (e) => {
   const collections = [];
   for (const collection in contentManifest) {
     if (contentManifest[collection].fields.sitemap)
@@ -4050,7 +4083,7 @@ async function parseSitemapXml(xml) {
   if (!xml) {
     throw new Error("Empty XML input provided");
   }
-  const { XMLParser } = await import('file:///Users/zhuxiaoming/Documents/trae_projects/template03/node_modules/.pnpm/fast-xml-parser@5.5.7/node_modules/fast-xml-parser/src/fxp.js');
+  const { XMLParser } = await import('file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/node_modules/.pnpm/fast-xml-parser@5.5.7/node_modules/fast-xml-parser/src/fxp.js');
   const parser = new XMLParser({
     isArray: (tagName) => ["url", "image", "video", "link", "tag", "price"].includes(tagName),
     removeNSPrefix: true,
@@ -4577,7 +4610,7 @@ function attachUrlWarnings(sources) {
   }
   return sources;
 }
-const _RuqscP = defineEventHandler(async (e) => {
+const _CVVlJJ = defineEventHandler(async (e) => {
   const _runtimeConfig = useSitemapRuntimeConfig();
   const siteConfig = getSiteConfig(e);
   const { sitemaps: _sitemaps } = _runtimeConfig;
@@ -4602,7 +4635,7 @@ const _RuqscP = defineEventHandler(async (e) => {
   };
 });
 
-const _LSqGB_ = defineEventHandler(async (e) => {
+const _RpL0Fx = defineEventHandler(async (e) => {
   const fixPath = createSitePathResolver(e, { absolute: false, withBase: true });
   const { sitemapName: fallbackSitemapName, cacheMaxAgeSeconds, version, xslColumns, xslTips } = useSitemapRuntimeConfig();
   setHeader(e, "Content-Type", "application/xslt+xml");
@@ -5617,9 +5650,9 @@ async function sitemapXmlEventHandler(e) {
   return createSitemap(e, Object.values(sitemaps)[0], runtimeConfig);
 }
 
-const _3AYVbX = defineEventHandler(sitemapXmlEventHandler);
+const _UYwCUo = defineEventHandler(sitemapXmlEventHandler);
 
-const _vXhJos = eventHandler(async (event) => {
+const _dILevH = eventHandler(async (event) => {
   const collection = getRouterParam(event, "collection") || event.path?.split("/")?.[2] || "";
   setHeader(event, "Content-Type", "text/plain");
   const data = await useStorage().getItem(`build:content:database.compressed.mjs`) || "";
@@ -5630,7 +5663,7 @@ const _vXhJos = eventHandler(async (event) => {
       return content.substring(lineStart.length, content.length - 1);
     }
   }
-  return await import('file:///Users/zhuxiaoming/Documents/trae_projects/template03/.nuxt/content/database.compressed.mjs').then((m) => m[collection]);
+  return await import('file:///Users/zhuenxi/Documents/trae_projects/all-template/template03/.nuxt/content/database.compressed.mjs').then((m) => m[collection]);
 });
 
 async function decompressSQLDump(base64Str, compressionType = "gzip") {
@@ -6000,7 +6033,7 @@ async function runTask(name, {
   }
 }
 
-const _VsznLW = eventHandler(async (event) => {
+const _qfaZJP = eventHandler(async (event) => {
   const { sql } = await readBody(event);
   const collection = getRouterParam(event, "collection") || event.path?.split("/")?.[2] || "";
   assertSafeQuery(sql, collection);
@@ -6011,23 +6044,23 @@ const _VsznLW = eventHandler(async (event) => {
   return loadDatabaseAdapter(conf).all(sql);
 });
 
-const _lazy_6qHGcQ = () => Promise.resolve().then(function () { return renderer; });
+const _lazy_7qWO3e = () => Promise.resolve().then(function () { return renderer; });
 
 const handlers = [
-  { route: '', handler: _CMIqs1, lazy: false, middleware: true, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_6qHGcQ, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _jo0cgE, lazy: false, middleware: true, method: undefined },
+  { route: '/__nuxt_error', handler: _lazy_7qWO3e, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: handler$1, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _M3ZDBY, lazy: false, middleware: true, method: undefined },
-  { route: '/__site-config__/debug.json', handler: _ry6Yt9, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/nuxt-content-urls.json', handler: _aJjk6N, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/debug.json', handler: _RuqscP, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/style.xsl', handler: _LSqGB_, lazy: false, middleware: false, method: undefined },
-  { route: '/sitemap.xml', handler: _3AYVbX, lazy: false, middleware: false, method: undefined },
-  { route: '/__nuxt_content/products/sql_dump.txt', handler: _vXhJos, lazy: false, middleware: false, method: undefined },
-  { route: '/__nuxt_content/info/sql_dump.txt', handler: _vXhJos, lazy: false, middleware: false, method: undefined },
-  { route: '/__nuxt_content/products/query', handler: _VsznLW, lazy: false, middleware: false, method: undefined },
-  { route: '/__nuxt_content/info/query', handler: _VsznLW, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_6qHGcQ, lazy: true, middleware: false, method: undefined }
+  { route: '', handler: _rJuJ1X, lazy: false, middleware: true, method: undefined },
+  { route: '/__site-config__/debug.json', handler: _tWROTK, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/nuxt-content-urls.json', handler: _FAArPL, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/debug.json', handler: _CVVlJJ, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/style.xsl', handler: _RpL0Fx, lazy: false, middleware: false, method: undefined },
+  { route: '/sitemap.xml', handler: _UYwCUo, lazy: false, middleware: false, method: undefined },
+  { route: '/__nuxt_content/products/sql_dump.txt', handler: _dILevH, lazy: false, middleware: false, method: undefined },
+  { route: '/__nuxt_content/info/sql_dump.txt', handler: _dILevH, lazy: false, middleware: false, method: undefined },
+  { route: '/__nuxt_content/products/query', handler: _qfaZJP, lazy: false, middleware: false, method: undefined },
+  { route: '/__nuxt_content/info/query', handler: _qfaZJP, lazy: false, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_7qWO3e, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {

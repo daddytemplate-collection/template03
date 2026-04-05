@@ -55,7 +55,7 @@
 
                         <!-- 提交按钮：深蓝色/工业蓝色实色按钮 -->
                         <button type="submit" :disabled="isSubmitting"
-                            class="group relative flex w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-full bg-[#0041a3] py-4 text-base font-bold text-white transition-all duration-300 hover:bg-[#0041a3]/90 hover:shadow-xl active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50">
+                            class="group relative flex w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-2xl bg-[#0041a3] py-4 text-base font-bold text-white transition-all duration-300 hover:bg-[#0041a3]/90 hover:shadow-xl active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50">
                             <template v-if="isSubmitting">
                                 <Loader2 class="h-5 w-5 animate-spin" />
                                 <span>Processing...</span>
@@ -87,7 +87,7 @@ const { isOpen, productName, showRegarding, closeInquiry, openInquiry } = useInq
 // 获取这个 key
 const accessKey = config.public.web3FormsKey
 
-
+import { toast } from 'vue-sonner'
 const siteConfig = ref<any>({ contact: {} })
 const { defineField, handleSubmit, errors, isSubmitting, resetForm } = useForm({
     validationSchema: contactSchema,
@@ -143,10 +143,5 @@ const onSubmit = handleSubmit(
         toast.error('Please check your input fields.');
     }
 );
-onMounted(async () => {
-    try {
-        const response = await fetch('/setting.json')
-        if (response.ok) siteConfig.value = await response.json()
-    } catch (e) { console.warn("Setting.json not found") }
-})
+
 </script>

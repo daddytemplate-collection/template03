@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
 
   },
-  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxt/image', 'shadcn-nuxt'],
+  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxt/image', 'shadcn-nuxt', ],
   shadcn: {
     /**
      * Prefix for all the imported component.

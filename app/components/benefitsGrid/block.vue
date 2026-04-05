@@ -17,7 +17,7 @@
         </p>
       </div>
       <!-- 顶部搜索栏 -->
- <div class="mx-auto px-4 md:px-10 py-10 bg-white">
+ <div class="mx-auto px-4 md:px-10 py-10 bg-white"  v-scroll-reveal="{delay:0.5}">
     
     <!-- 1. 顶部搜索区：通过加大上下留白，产生“轻盈”的呼吸感 -->
     <div v-if="showSearch" class="flex flex-col md:flex-row items-end md:items-center justify-between mb-12 gap-4">
@@ -55,7 +55,7 @@
       </div>
 
       <!-- 列表内容：完全保留您的列表项样式 -->
-      <div class="divide-y divide-slate-50">
+      <div class="divide-y divide-slate-50"  >
         <TransitionGroup name="list-fade">
         <div v-for="item in paginatedProducts" :key="item.id"
             class="group rounded-lg overflow-hidden even:bg-[#e0eaf6]/20 bg-white border-b border-slate-100 p-5  grid grid-cols-1 gap-2 md:grid-cols-[2.5fr_1.5fr_1fr_1fr] items-center gap-5 transition-all duration-300 hover:bg-[#fcfdfe] hover:translate-x-1 md:hover:translate-x-2.5">

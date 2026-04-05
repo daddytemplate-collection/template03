@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-black text-white font-sans overflow-hidden">
+  <main class=" font-sans overflow-hidden">
 
     <!-- 1. Hero Section: 品牌宣言 -->
     <section class="relative pt-32 pb-20 px-6">

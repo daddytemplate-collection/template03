@@ -2,7 +2,7 @@
 export default defineAppConfig({
   "base": {
     "email": "inofo@daddytemplate.com",
-    "companyName": "daddytemplate Corporate",
+    "companyName": "Shengyuan",
     "phone": "+86 (136) 5661-7631",
     "address": "123 Main St, Anytown, CHina"
   },
@@ -10,6 +10,39 @@ export default defineAppConfig({
     "darklogoUrl": "https://hidaddy.oss-cn-shanghai.aliyuncs.com/daddytemplate/fortemplate/dark-logo.png",
     "lightlogoUrl": "https://hidaddy.oss-cn-shanghai.aliyuncs.com/daddytemplate/fortemplate/logo.png",
     "logoName": "",
+  },
+  megaMenu: {
+    // 1. 顶部标题区域
+    header: {
+      tag: "Product Portfolio",
+      title: "Chemical Solutions"
+    },
+    // 2. 三个分类的具体内容（图片、文字、描述）
+    categories: [
+      {
+        label: "Aroma Chemicals",
+        slug: "aroma-chemicals",
+        description: "High-purity aroma chemicals for sophisticated fragrance and flavor synthesis.",
+        image: "https://framerusercontent.com/images/5umROpQf1LFQZpL5TNpSAKSt0M.jpg"
+      },
+      {
+        label: "Natural Products",
+        slug: "natural-products",
+        description: "Pure botanical extractions maintaining the full spectrum of natural aromatic profiles.",
+        image: "https://media.istockphoto.com/id/1315042436/zh/%E7%85%A7%E7%89%87/%E5%A9%A6%E5%A5%B3%E6%BA%96%E5%82%99%E8%8A%B3%E9%A6%99%E7%99%82%E6%B3%95%E6%9C%83%E8%AD%B0%E5%9C%A8%E9%A4%90%E6%A1%8C%E4%B8%8A%E8%88%87%E7%B2%BE%E6%B2%B9%E6%93%B4%E6%95%A3%E5%8A%91%E9%86%AB%E7%94%A8%E8%8D%89%E8%97%A5%E4%B8%8D%E5%90%8C%E9%A1%9E%E5%9E%8B%E7%9A%84%E6%B2%B9%E5%92%8C%E7%B2%BE%E8%8F%AF%E8%8A%B3%E9%A6%99%E7%99%82%E6%B3%95%E5%92%8C%E6%9B%BF%E4%BB%A3%E9%86%AB%E5%AD%B8%E6%A6%82%E5%BF%B5%E8%87%AA%E7%84%B6%E7%99%82%E6%B3%95.jpg?s=2048x2048&w=is&k=20&c=dM2hJdmCbWzgBuD43iPre0S1S9kt2Bfwg2HB3jqLykQ="
+      },
+      {
+        label: "Menthol Synthetic",
+        slug: "menthol-synthetic",
+        description: "Tailored chemical solutions designed for specific industrial research requirements.",
+        image: "https://media.istockphoto.com/id/1405646574/zh/%E7%85%A7%E7%89%87/translucent-menthol-crystals-and-green-mint-leaves-falling-on-white-background.webp?s=2048x2048&w=is&k=20&c=ckqSAmSzW05UuHudasbLuHwHSKJW__rrw6W858ga5ZQ="
+      }
+    ],
+    // 3. 底部认证与位置信息
+    footer: {
+      certifications: ["ISO 9001:2008 CERTIFIED", "REACH COMPLIANT"],
+      location: "ShengYuan • JiaXing • China"
+    }
   },
   "index": {
     "hero": {
@@ -35,7 +68,7 @@ export default defineAppConfig({
             { id: '00004', name: '6-METHYL COUMARIN', cas: '92-48-8' },
 
           ],
-         
+
           image: "https://framerusercontent.com/images/5umROpQf1LFQZpL5TNpSAKSt0M.jpg",
           impact: ["40% Less Inventory Waste", "35% Faster Production", "20% More Accurate Forecasting", "25% Faster Fulfillment"]
         },

@@ -1,83 +1,108 @@
 <!-- pages/products/[category]/index.vue -->
 <template>
-  <div class="bg-black min-h-screen pt-32 pb-24 text-white font-sans overflow-hidden">
-    <!-- 背景装饰：顶部柔和蓝光 -->
-    <div
-      class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-[300px] bg-blue-600/5 blur-[120px] pointer-events-none">
+  <div class="min-h-screen bg-[#FBFDFF] font-sans selection:bg-[#00378a]/10 pt-32 pb-20">
+    
+    <!-- 1. 顶部视觉切换器 (Visual Switcher) -->
+    <section class="container mx-auto px-6 max-w-[1200px] mb-20">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <NuxtLink 
+    v-for="cat in allCategories" 
+    :key="cat.slug"
+    :to="`/products/${cat.slug}`"
+    class="group relative h-[120px] rounded-2xl overflow-hidden border-2 transition-all duration-300"
+    :class="[
+      categorySlug === cat.slug 
+      ? 'opacity-100 shadow-md scale-[1.02] z-10' 
+      : 'border-transparent  hover:opacity-100'
+    ]"
+  >
+    <!-- 1. 全彩背景图 -->
+    <img 
+      :src="cat.image" 
+      class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+    />
+    
+    <!-- 2. 极简文字遮罩：仅底部一小层半透明黑色，确保白色文字可见 -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
+    <!-- 3. 文字内容：左下角对齐 -->
+    <div class="absolute inset-0 p-5 flex items-end justify-between">
+      <div class="text-left">
+        <span class="text-[9px] font-black text-white/70 uppercase tracking-[0.2em] block mb-0.5">Catalog</span>
+        <h3 class="text-white text-[17px] font-bold tracking-tight">
+          {{ cat.name }}
+        </h3>
+      </div>
+
+      <!-- 选中时的极简对勾图标（可选，增加明确性） -->
+      <div v-if="categorySlug === cat.slug" class="text-white">
+         <Check size="18" stroke-width="3" />
+      </div>
     </div>
+  </NuxtLink>
+</div>
 
-    <div class="container mx-auto px-6 max-w-[1300px] relative z-10">
-
-      <!-- 1. 面包屑 (Breadcrumbs) - 暗黑极简版 -->
-      <nav v-scroll-reveal
-        class="mb-12 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-zinc-500">
-        <NuxtLink to="/" class="hover:text-blue-500 transition-colors">Home</NuxtLink>
-        <span class="opacity-30">/</span>
-        <NuxtLink to="/products" class="hover:text-blue-500 transition-colors">Products</NuxtLink>
-        <span class="opacity-30">/</span>
-        <span class="text-zinc-300 capitalize">{{ categoryName }}</span>
-      </nav>
-
-      <!-- 2. 标题区域 - 采用 header-reveal 动效 -->
-      <div class="mb-16 max-w-[800px]">
-        <div v-scroll-reveal
-          class="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest mb-6">
-          Collections
-        </div>
-        <h1 v-scroll-reveal
-          class="text-[42px] md:text-[60px] font-bold text-white tracking-[-0.04em] leading-[1.1] mb-6 capitalize">
-          See Our Collections <span class="text-blue-500">{{ categoryName }}</span>
-        </h1>
-
-      </div>
-
-      <!-- 3. 产品网格 - 保持逻辑，注入动画 -->
-      <!-- <div v-if="products && products.length > 0"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
-        <div v-for="(item, index) in products" :key="item._path" v-scroll-reveal="{ delay: index * 0.1, y: 20 }">
-          <ProductCard :product="item" />
-        </div>
-      </div> -->
-      <div v-if="formattedProducts && formattedProducts.length > 0">
-        <BenefitsGridBlock  :showSearch="true" :products="formattedProducts"  />
-      </div>
-
-      <!-- 4. 空状态 (Empty State) - 改造成暗黑玻璃拟态 -->
-      <div v-else v-scroll-reveal
-        class="relative py-32 flex flex-col items-center justify-center rounded-[3rem] border border-white/5 bg-zinc-950/50 overflow-hidden shadow-2xl">
-        <!-- 内部装饰光晕 -->
-        <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-64 bg-blue-600/5 blur-[100px] pointer-events-none">
-        </div>
-
-        <div class="relative z-10 text-center">
-          <div class="inline-flex p-6 rounded-full bg-white/5 border border-white/10 mb-8 text-zinc-600">
-            <PackageOpen class="w-12 h-12" />
+      <!-- 底部统计装饰条 -->
+      
+      <!-- 类别统计与说明 -->
+      <div class="flex items-center gap-6 mt-10 px-4">
+          <div class="flex items-center gap-2">
+            <span class="size-1.5 rounded-full bg-[#00378a]"></span>
+            <span class="text-[11px] font-bold text-[#001f4e] uppercase tracking-widest">
+              Showing {{ formattedProducts?.length || 0 }} items in {{ categoryName }}
+            </span>
           </div>
-          <h3 class="text-2xl font-bold text-white mb-2 tracking-tight">Stay Tuned</h3>
-          <p class="text-zinc-500 max-w-[300px] mx-auto font-light leading-relaxed">
-            New high-quality products are currently being added to the <span class="text-zinc-300 capitalize">{{
-              categoryName }}</span> collection.
-          </p>
-          <div class="mt-10">
-            <NuxtLink to="/products"
-              class="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-500 border-b border-blue-500/30 pb-1 hover:border-blue-500 transition-all">
-              Back to all categories
-            </NuxtLink>
-          </div>
+          <div class="h-px flex-1 bg-slate-100"></div>
+          <p class="text-[11px] text-slate-400 italic">Advanced Purity Analytics v4.0</p>
+      </div>
+    </section>
+
+    <!-- 2. 主列表区：ProductBlock -->
+    <main class="container mx-auto px-6 max-w-[1200px]">
+      <div class="transition-all duration-700 ease-in-out" :key="categorySlug">
+        <ProductBlock 
+          v-if="formattedProducts && formattedProducts.length > 0" 
+          :showSearch="true" 
+          :products="formattedProducts" 
+        />
+        
+        <!-- 纯净空状态 -->
+        <div v-else class="py-40 text-center flex flex-col items-center">
+           <div class="size-16 rounded-full bg-slate-50 flex items-center justify-center mb-6">
+              <div class="size-2 rounded-full bg-slate-200 animate-ping"></div>
+           </div>
+           <p class="text-[12px] font-medium text-slate-300 uppercase tracking-widest">Molecular data loading...</p>
         </div>
       </div>
+    </main>
 
-    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { PackageOpen } from 'lucide-vue-next'
-
+import { PackageOpen,Check } from 'lucide-vue-next'
+const siteConfig = useAppConfig()
 const route = useRoute()
+const menuConfig = siteConfig.megaMenu?.categories || []
 const categoryName = route.params.category as string
-
+const categorySlug = categoryName as string
+const allCategories = computed(() => [
+  { 
+    name: 'Aroma Chemicals', 
+    slug: 'aroma-chemicals', 
+    image: menuConfig[0]?.image || 'https://images.unsplash.com/photo-1532187863486-abf9d3a099a1?auto=format&fit=crop&q=80&w=800' 
+  },
+  { 
+    name: 'Natural Products', 
+    slug: 'natural-products', 
+    image: menuConfig[1]?.image || 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800' 
+  },
+  { 
+    name: 'Menthol Synthetic', 
+    slug: 'menthol-synthetic',  
+    image: menuConfig[2]?.image || 'https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&q=80&w=800' 
+  }
+])
 const { data: rawProducts, status } = await useAsyncData('products-collection', () => {
   return queryCollection('products')
     .where('path', 'LIKE', `/products/${categoryName}/%`) 

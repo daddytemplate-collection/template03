@@ -32,7 +32,7 @@
         "../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt"
       ],
       "vite/client": [
-        "../node_modules/.pnpm/vite@7.3.1_jiti@2.6.1_lightningcss@1.32.0_terser@5.46.1_yaml@2.8.2/node_modules/vite/client"
+        "../node_modules/.pnpm/vite@7.3.1_jiti@1.21.7_lightningcss@1.32.0_terser@5.46.1_yaml@2.8.2/node_modules/vite/client"
       ],
       "@nuxtjs/mdc": [
         "../node_modules/.pnpm/@nuxtjs+mdc@0.20.2_magicast@0.5.2/node_modules/@nuxtjs/mdc"
@@ -65,10 +65,10 @@
         "../node_modules/.pnpm/crossws@0.3.5/node_modules/crossws"
       ],
       "#content/components": [
-        "./content/components.ts"
+        "./content/components"
       ],
       "#content/manifest": [
-        "./content/manifest.ts"
+        "./content/manifest"
       ],
       "~": [
         "../app"
@@ -149,16 +149,16 @@
         "./imports"
       ],
       "#mdc-configs": [
-        "./mdc-configs.mjs"
+        "./mdc-configs"
       ],
       "#mdc-highlighter": [
-        "./mdc-highlighter.mjs"
+        "./mdc-highlighter"
       ],
       "#mdc-imports": [
-        "./mdc-imports.mjs"
+        "./mdc-imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/dev.json"
+        "./manifest/meta/dev"
       ],
       "#components": [
         "./components"
