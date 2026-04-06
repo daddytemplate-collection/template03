@@ -27,7 +27,7 @@ const { data: rawProducts, status } = await useAsyncData('products-collection', 
     .where('path', 'LIKE', '/products/aroma-chemicals/%') 
     .all()
 })
-console.log('rawProducts',rawProducts.value)
+
 // 2. 整理数据 (Mapping)
 // 使用 computed 实时转换数据格式，确保与你之前的假数据结构一致
 const formattedProducts = computed(() => {

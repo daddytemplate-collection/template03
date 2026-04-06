@@ -16,9 +16,12 @@ type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {},
 
 export const CatalogFetcher: typeof import("../app/components/CatalogFetcher.vue")['default']
 export const Counter: typeof import("../app/components/Counter.vue")['default']
+export const ImageScrollWall: typeof import("../app/components/ImageScrollWall.vue")['default']
 export const InquiryGlobalOverlay: typeof import("../app/components/InquiryGlobalOverlay.vue")['default']
 export const InquiryModal: typeof import("../app/components/InquiryModal.vue")['default']
 export const PremiumButton: typeof import("../app/components/PremiumButton.vue")['default']
+export const StatPillsSection: typeof import("../app/components/StatPillsSection.vue")['default']
+export const TeamSection: typeof import("../app/components/TeamSection.vue")['default']
 export const BenefitsGridBlock: typeof import("../app/components/benefitsGrid/block.vue")['default']
 export const CartBlock: typeof import("../app/components/cart/block.vue")['default']
 export const CaseBlock: typeof import("../app/components/case/block.vue")['default']
@@ -123,9 +126,12 @@ export const MDCSlot: typeof import("../node_modules/.pnpm/@nuxtjs+mdc@0.20.2_ma
 export const NuxtIsland: typeof import("../node_modules/.pnpm/nuxt@3.21.2_@parcel+watcher@2.5.6_@vue+compiler-sfc@3.5.30_better-sqlite3@12.8.0_cac@6._88d0c5eb87026a6cb0cf0c692e5003ae/node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const LazyCatalogFetcher: LazyComponent<typeof import("../app/components/CatalogFetcher.vue")['default']>
 export const LazyCounter: LazyComponent<typeof import("../app/components/Counter.vue")['default']>
+export const LazyImageScrollWall: LazyComponent<typeof import("../app/components/ImageScrollWall.vue")['default']>
 export const LazyInquiryGlobalOverlay: LazyComponent<typeof import("../app/components/InquiryGlobalOverlay.vue")['default']>
 export const LazyInquiryModal: LazyComponent<typeof import("../app/components/InquiryModal.vue")['default']>
 export const LazyPremiumButton: LazyComponent<typeof import("../app/components/PremiumButton.vue")['default']>
+export const LazyStatPillsSection: LazyComponent<typeof import("../app/components/StatPillsSection.vue")['default']>
+export const LazyTeamSection: LazyComponent<typeof import("../app/components/TeamSection.vue")['default']>
 export const LazyBenefitsGridBlock: LazyComponent<typeof import("../app/components/benefitsGrid/block.vue")['default']>
 export const LazyCartBlock: LazyComponent<typeof import("../app/components/cart/block.vue")['default']>
 export const LazyCaseBlock: LazyComponent<typeof import("../app/components/case/block.vue")['default']>

@@ -198,11 +198,13 @@ Menthol and its related products are widely used in personal care applications.`
     "titleTwo": "vision",
     "titleThree": "and reality.",
     "description": "Driven by passion and precision, we craft digital experiences that redefine industry standards and empower global growth.",
-    "stats": [
-      { number: '6+', 'label': 'Years Experience' },
-      { number: '120+', 'label': 'Projects Completed' },
-      { number: '15+', 'label': 'Industry Awards' },
-      { number: '98%', 'label': 'Client Retention' }
+    stats: [
+      { id: 1, type: 'icon', icon: 'xxx', variant: 'outline', row: 1 },
+      { id: 2, type: 'stat', value: '98%', label: 'Transactions are processed successfully', variant: 'soft', trend: 'up', row: 1 },
+      { id: 3, type: 'icon', icon: 'xxx', variant: 'outline', row: 1 },
+      { id: 4, type: 'stat', value: '$10K+', label: "Our users' average saving amount", variant: 'soft', row: 2 },
+      { id: 5, type: 'icon', icon: 'plus', variant: 'outline', row: 2 },
+      { id: 6, type: 'stat', value: '50%', label: 'Effective in financial growth than before', variant: 'gradient', trend: 'up', row: 2 },
     ],
     "storyTitle": "Our Story",
     "storyParagraphs": [
@@ -213,67 +215,65 @@ Menthol and its related products are widely used in personal care applications.`
       'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80',
       'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80'
-    ]
-    ,
-    "ourvalue": {
-      "tag": "VALUE",
-      "title": "Our Value",
-      "subtitle": "Our core values drive our success and ensure customer trust satisfaction.",
-      "benefits": [
-        {
-          title: "Iqqqncreased Productivity",
-          description: "Gain actionable insights with AI-driven analytics to improve decision-making and strategy.",
-          icon: 'Target'
-        },
-        {
-          title: "Better Customer Experience",
-          description: "Personalized AI interactions improve response times, customer engagement, and overall satisfaction.",
-          icon: 'Users'
-        },
-        {
-          title: "24/7 Availability",
-          description: "AI-powered systems operate around the clock, ensuring seamless support and execution without downtime.",
-          icon: 'ShieldCheck'
-        },
-      ],
+    ],
+    "secondblock": {
+      tag: 'Statistics',
+      titleone: 'See Your',
+      titletwo: 'Wealth Grow',
     },
-
-    "features": {
-      "title": "Why Partner With Us?",
-      "description": "We don't just supply products; we provide complete solutions to help your business grow and stay competitive in the market.",
-      "list": [
-        {
-          "icon": "Factory",
-          "title": "OEM & ODM Capability",
-          "description": "Strong R&D team and flexible production lines to meet your customized requirements perfectly."
-        },
-        {
-          "icon": "ShieldCheck",
-          "title": "Strict Quality Control",
-          "description": "From raw materials to final packaging, every step is strictly monitored to ensure zero defects."
-        },
-        {
-          "icon": "Globe",
-          "title": "Global Export Experience",
-          "description": "Familiar with international trade standards, certifications, and smooth customs clearance."
-        },
-        {
-          "icon": "Truck",
-          "title": "Fast & Reliable Delivery",
-          "description": "Optimized supply chain and strategic logistics partnerships ensure your goods arrive on time."
-        },
-        {
-          "icon": "Settings",
-          "title": "Advanced Technology",
-          "description": "Equipped with state-of-the-art machinery to guarantee precision, efficiency, and scale."
-        },
-        {
-          "icon": "Users",
-          "title": "24/7 Professional Support",
-          "description": "Our multilingual sales team is always ready to provide rapid responses and dedicated service."
-        }
-      ]
-    }
+    teamTag: 'Team',
+    teamTitleone: 'See Our',
+    teamTitletwo: 'Team',
+    teamMembers :[
+      {
+        name: 'MR Zhang',
+        role: 'Founder & CEO',
+        image: 'https://img1.baidu.com/it/u=1196787366,2837426063&fm=253&fmt=auto&app=138&f=JPEG?w=475&h=501',
+        socials: { email: '#', linkedin: '#', github: '#' }
+      },
+      {
+        name: 'John David',
+        role: 'CEO',
+        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400',
+        socials: { email: '#', linkedin: '#', github: '#' }
+      },
+      {
+        name: 'Michael James',
+        role: 'Marketing Leader',
+        image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400',
+        socials: { email: '#', linkedin: '#', github: '#' }
+      },
+      {
+        name: 'Jennifer Ann',
+        role: 'Project Manager',
+        image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400',
+        socials: { email: '#', linkedin: '#', github: '#' }
+      },
+      {
+        name: 'William Joseph',
+        role: 'Product Designer',
+        image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=400',
+        socials: { email: '#', linkedin: '#', github: '#' }
+      },
+      {
+        name: 'Charlotte Rose',
+        role: 'Product Designer',
+        image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400',
+        socials: { email: '#', linkedin: '#', github: '#' }
+      },
+      {
+        name: 'Amelia Grace',
+        role: 'Software Engineer',
+        image: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=400',
+        socials: { email: '#', linkedin: '#', github: '#' }
+      },
+      {
+        name: 'Evelyn Mae',
+        role: 'Software Engineer',
+        image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400',
+        socials: { email: '#', linkedin: '#', github: '#' }
+      }
+    ]
   },
   "contact": {
     "tag": "Contact Us",
