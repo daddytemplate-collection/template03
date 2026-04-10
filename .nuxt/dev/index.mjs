@@ -969,7 +969,7 @@ const _inlineRuntimeConfig = {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-04-06T10:11:03.166Z"
+          "X-Sitemap-Prerendered": "2026-04-06T12:20:10.705Z"
         }
       },
       "/": {
@@ -1085,10 +1085,6 @@ const _inlineRuntimeConfig = {
         "include": [],
         "exclude": [
           "/_**",
-          "/_nuxt/**",
-          "/__nuxt_content/**",
-          "/_nuxt/**",
-          "/__nuxt_content/**",
           "/_nuxt/**",
           "/__nuxt_content/**"
         ],
@@ -2740,22 +2736,7 @@ _BqKzGfLs68qqEVsR8n7nFresv27fJxwjtfmM3jkvEwM,
 _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw
 ];
 
-const assets = {
-  "/index.mjs": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"3ab45-XwFAcJ6OR8qeshWr4WCVR1xDi+w\"",
-    "mtime": "2026-04-06T12:02:04.236Z",
-    "size": 240453,
-    "path": "index.mjs"
-  },
-  "/index.mjs.map": {
-    "type": "application/json",
-    "etag": "\"f71a6-wlTv8LJLRPWyWoMiBdcLGjvO5G0\"",
-    "mtime": "2026-04-06T12:02:04.237Z",
-    "size": 1012134,
-    "path": "index.mjs.map"
-  }
-};
+const assets = {};
 
 function readAsset (id) {
   const serverDir = dirname$1(fileURLToPath(globalThis._importMeta_.url));

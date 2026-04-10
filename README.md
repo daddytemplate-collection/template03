@@ -5,7 +5,7 @@
 # 如需要部署服务以及配置服务(¥199.00),可直接和我取得联系13656617631
 
 ## 模板预览地址
-[模板预览地址](https://www.daddytemplate.com/previews/template02/index.html)
+[模板预览地址](https://www.daddytemplate.com/previews/template03/index.html)
 
 # 开发者使用方法
 安装依赖
